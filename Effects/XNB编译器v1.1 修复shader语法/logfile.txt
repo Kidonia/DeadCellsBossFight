@@ -1,0 +1,176 @@
+Message at 2024/3/1 1:14:45: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 1:14:45: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Error at 2024/3/1 1:14:46: XNA Framework Reach profile does not support pixel shader model 3.0.
+Message at 2024/3/1 1:27:20: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 1:27:20: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 1:27:21: Compiling Fire.xnb
+Message at 2024/3/1 1:27:21: Importing Glow.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 1:27:21: Processing Glow.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 1:27:21: Compiling Glow.xnb
+Message at 2024/3/1 15:51:58: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 15:51:58: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 15:51:59: Compiling Fire.xnb
+Message at 2024/3/1 16:19:51: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 16:19:51: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 16:19:52: Compiling Fire.xnb
+Message at 2024/3/1 17:08:52: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 17:08:52: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 17:08:53: Compiling Fire.xnb
+Message at 2024/3/1 17:22:03: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 17:22:03: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 17:22:04: Compiling Fire.xnb
+Message at 2024/3/1 17:29:10: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 17:29:10: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 17:29:11: Compiling Fire.xnb
+Message at 2024/3/1 20:26:43: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 20:26:43: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 20:26:44: Compiling Fire.xnb
+Message at 2024/3/1 21:01:45: Importing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/1 21:01:45: Processing Fire.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/1 21:01:45: Compiling Fire.xnb
+Message at 2024/3/2 12:33:14: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/2 12:33:14: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Error at 2024/3/2 12:33:14: Errors compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\ScreenFault.fx:
+ID3DXEffectCompiler: There were no techniques
+ID3DXEffectCompiler: Compilation failed
+Message at 2024/3/2 12:34:14: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/2 12:34:14: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/2 12:34:14: Compiling ScreenFault.xnb
+Message at 2024/3/11 21:09:41: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/11 21:09:41: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/11 21:09:41: Compiling ScreenFault.xnb
+Message at 2024/3/11 21:09:41: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/11 21:09:41: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/11 21:09:41: Compiling Trail2.xnb
+Message at 2024/3/21 12:01:54: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/21 12:01:54: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/21 12:01:54: Compiling ScreenFault.xnb
+Message at 2024/3/21 12:01:54: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/21 12:01:54: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/21 12:01:54: Compiling Trail2.xnb
+Message at 2024/3/27 20:25:44: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/27 20:25:44: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/3/27 20:25:44: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/3/27 20:25:44: Compiling Aurora.xnb
+Message at 2024/3/27 20:25:44: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/27 20:25:44: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/27 20:25:44: Compiling ScreenFault.xnb
+Message at 2024/3/27 20:25:44: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/3/27 20:25:44: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/3/27 20:25:44: Compiling Trail2.xnb
+Message at 2024/8/4 12:44:41: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 12:44:41: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/8/4 12:44:41: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/8/4 12:44:41: Compiling Aurora.xnb
+Message at 2024/8/4 12:44:42: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 12:44:42: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 12:44:42: Compiling ScreenFault.xnb
+Message at 2024/8/4 12:44:42: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 12:44:42: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 12:44:42: Compiling Trail2.xnb
+Message at 2024/8/4 12:44:54: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 12:44:54: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/8/4 12:44:54: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/8/4 12:44:54: Compiling Aurora.xnb
+Message at 2024/8/4 12:44:54: Importing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 12:44:54: Processing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 12:44:54: Compiling drug.xnb
+Message at 2024/8/4 12:44:54: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 12:44:54: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 12:44:54: Compiling ScreenFault.xnb
+Message at 2024/8/4 12:44:54: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 12:44:54: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 12:44:54: Compiling Trail2.xnb
+Message at 2024/8/4 13:26:17: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 13:26:17: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/8/4 13:26:17: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/8/4 13:26:17: Compiling Aurora.xnb
+Message at 2024/8/4 13:26:17: Importing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 13:26:17: Processing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 13:26:17: Compiling drug.xnb
+Message at 2024/8/4 13:26:17: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 13:26:17: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 13:26:17: Compiling ScreenFault.xnb
+Message at 2024/8/4 13:26:17: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 13:26:17: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 13:26:17: Compiling Trail2.xnb
+Message at 2024/8/4 14:02:54: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 14:02:54: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/8/4 14:02:54: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/8/4 14:02:54: Compiling Aurora.xnb
+Message at 2024/8/4 14:02:54: Importing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 14:02:54: Processing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 14:02:54: Compiling drug.xnb
+Message at 2024/8/4 14:02:54: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 14:02:54: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 14:02:54: Compiling ScreenFault.xnb
+Message at 2024/8/4 14:02:54: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/4 14:02:54: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/4 14:02:54: Compiling Trail2.xnb
+Message at 2024/8/23 10:21:29: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/23 10:21:29: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/8/23 10:21:29: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/8/23 10:21:29: Compiling Aurora.xnb
+Message at 2024/8/23 10:21:29: Importing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/23 10:21:29: Processing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/23 10:21:29: Compiling drug.xnb
+Message at 2024/8/23 10:21:29: Importing RadialBlur.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/23 10:21:29: Processing RadialBlur.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/23 10:21:29: Compiling RadialBlur.xnb
+Message at 2024/8/23 10:21:29: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/23 10:21:29: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/23 10:21:29: Compiling ScreenFault.xnb
+Message at 2024/8/23 10:21:29: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/23 10:21:29: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/23 10:21:29: Compiling Trail2.xnb
+Message at 2024/8/26 18:51:55: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 18:51:55: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/8/26 18:51:55: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/8/26 18:51:55: Compiling Aurora.xnb
+Message at 2024/8/26 18:51:55: Importing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 18:51:55: Processing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 18:51:55: Compiling drug.xnb
+Message at 2024/8/26 18:51:55: Importing RadialBlur.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 18:51:55: Processing RadialBlur.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 18:51:55: Compiling RadialBlur.xnb
+Message at 2024/8/26 18:51:55: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 18:51:55: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 18:51:55: Compiling ScreenFault.xnb
+Message at 2024/8/26 18:51:55: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 18:51:55: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 18:51:55: Compiling Trail2.xnb
+Message at 2024/8/26 19:32:11: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 19:32:11: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/8/26 19:32:12: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/8/26 19:32:12: Compiling Aurora.xnb
+Message at 2024/8/26 19:32:12: Importing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 19:32:12: Processing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 19:32:12: Compiling drug.xnb
+Message at 2024/8/26 19:32:12: Importing RadialBlur.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 19:32:12: Processing RadialBlur.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 19:32:12: Compiling RadialBlur.xnb
+Message at 2024/8/26 19:32:12: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 19:32:12: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 19:32:12: Compiling ScreenFault.xnb
+Message at 2024/8/26 19:32:12: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 19:32:12: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 19:32:12: Compiling Trail2.xnb
+Message at 2024/8/26 20:00:16: Importing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 20:00:16: Processing Aurora.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Warning at 2024/8/26 20:00:16: Warning compiling C:\Users\刘舒瑞\Documents\My Games\Terraria\tModLoader\ModSources\DeadCellsBossFight\Effects\XNB编译器v1.1 修复shader语法\Effects\Aurora.fx: warning X3557: Loop only executes for 0 iteration(s), forcing loop to unroll
+Message at 2024/8/26 20:00:16: Compiling Aurora.xnb
+Message at 2024/8/26 20:00:16: Importing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 20:00:16: Processing drug.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 20:00:16: Compiling drug.xnb
+Message at 2024/8/26 20:00:16: Importing filter.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 20:00:16: Processing filter.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 20:00:16: Compiling filter.xnb
+Message at 2024/8/26 20:00:16: Importing RadialBlur.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 20:00:16: Processing RadialBlur.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 20:00:16: Compiling RadialBlur.xnb
+Message at 2024/8/26 20:00:16: Importing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 20:00:16: Processing ScreenFault.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 20:00:16: Compiling ScreenFault.xnb
+Message at 2024/8/26 20:00:16: Importing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.EffectImporter
+Message at 2024/8/26 20:00:16: Processing Trail2.fx with Microsoft.Xna.Framework.Content.Pipeline.Processors.EffectProcessor
+Message at 2024/8/26 20:00:16: Compiling Trail2.xnb

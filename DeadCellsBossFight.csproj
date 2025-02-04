@@ -1,0 +1,24 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>DeadCellsBossFight</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="effects\drug.fx" />
+    <None Remove="effects\filter.fx" />
+    <None Remove="effects\RadialBlur.fx" />
+    <None Remove="NPCs\ExtraBosses\Behemoth.png" />
+    <None Remove="NPCs\ExtraBosses\Behemoth_Head_Boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="StructureHelper">
+      <HintPath>StructureHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="SubworldLibrary">
+      <HintPath>SubworldLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

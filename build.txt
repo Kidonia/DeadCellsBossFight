@@ -1,0 +1,5 @@
+displayName = DeadCellsBossFight
+author = DP_nia
+version = 0.1
+modReferences = SubworldLibrary
+sortAfter = SubworldLibrary

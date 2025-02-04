@@ -1,0 +1,1694 @@
+[
+    {
+        "id": "HorizontalTurret",
+        "x": 1,
+        "y": 0,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "StandardTurret",
+        "x": 20,
+        "y": 9,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "HeavyTurret",
+        "x": 16,
+        "y": 6,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "CeilTurret",
+        "x": 6,
+        "y": 6,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "FireTurret",
+        "x": 3,
+        "y": 0,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "GroundSaw",
+        "x": 2,
+        "y": 0,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "RootTrap",
+        "x": 4,
+        "y": 0,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "Crusher",
+        "x": 5,
+        "y": 0,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "Decoy",
+        "x": 15,
+        "y": 6,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "PortableDoor",
+        "x": 31,
+        "y": 4,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "TeslaCoil",
+        "x": 32,
+        "y": 4,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Cannon",
+        "x": 31,
+        "y": 8,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "DarknessLantern",
+        "x": 1,
+        "y": 7,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "ExplosiveGrenade",
+        "x": 6,
+        "y": 0,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "FastGrenade",
+        "x": 6,
+        "y": 8,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "ClusterBomb",
+        "x": 0,
+        "y": 5,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "MagnetGrenade",
+        "x": 7,
+        "y": 4,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "StunningGrenade",
+        "x": 7,
+        "y": 0,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "IceBomb",
+        "x": 13,
+        "y": 5,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "FireBomb",
+        "x": 8,
+        "y": 0,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "RootBomb",
+        "x": 9,
+        "y": 0,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "OilBomb",
+        "x": 10,
+        "y": 0,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "SideBomb",
+        "x": 19,
+        "y": 0,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "HolyWater",
+        "x": 28,
+        "y": 3,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "SlowOrb",
+        "x": 13,
+        "y": 0,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Tornado",
+        "x": 15,
+        "y": 11,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "KnivesCircle",
+        "x": 14,
+        "y": 0,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "DamageBuff",
+        "x": 15,
+        "y": 0,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "LeechBuff",
+        "x": 9,
+        "y": 8,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "ExtraHeal",
+        "x": 19,
+        "y": 8,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Hook",
+        "x": 2,
+        "y": 5,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "BackBlink",
+        "x": 7,
+        "y": 6,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "TimeDistorsion",
+        "x": 10,
+        "y": 14,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "ToxicCloud",
+        "x": 5,
+        "y": 6,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "DamageAura",
+        "x": 12,
+        "y": 7,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "Shockwave",
+        "x": 16,
+        "y": 7,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Wings",
+        "x": 17,
+        "y": 7,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Pokecharge",
+        "x": 14,
+        "y": 8,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Map",
+        "x": 18,
+        "y": 10,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Owl",
+        "x": 8,
+        "y": 14,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "OwlUp",
+        "x": 9,
+        "y": 14,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Chicken",
+        "x": 40,
+        "y": 18,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Dash",
+        "x": 25,
+        "y": 2,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "BackDash",
+        "x": 25,
+        "y": 3,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "GiantWhistle",
+        "x": 27,
+        "y": 2,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "SeismicStomp",
+        "x": 26,
+        "y": 3,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "CollectorSpin",
+        "x": 24,
+        "y": 4,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "SmokeBomb",
+        "x": 33,
+        "y": 2,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "SpawnFriendlyHardy",
+        "x": 34,
+        "y": 2,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "IceArmor",
+        "x": 30,
+        "y": 3,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "LightningRod",
+        "x": 24,
+        "y": 9,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "GardenerSickles",
+        "x": 31,
+        "y": 5,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "FlyingSword",
+        "x": 29,
+        "y": 6,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "BubbleShieldPower",
+        "x": 22,
+        "y": 7,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "FaceFlask",
+        "x": 30,
+        "y": 8,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "PolloPower",
+        "x": 29,
+        "y": 8,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "SpawnLilStaphy",
+        "x": 29,
+        "y": 9,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "LilStaphyStab",
+        "x": 29,
+        "y": 10,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "SpawnAdultLilStaphy",
+        "x": 30,
+        "y": 9,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "AdultLilStaphyStab",
+        "x": 30,
+        "y": 10,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "DiverseDeckJuggernaut",
+        "x": 35,
+        "y": 4,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "DiverseDeckCatalyst",
+        "x": 36,
+        "y": 5,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "DiverseDeckElectro",
+        "x": 36,
+        "y": 4,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "DiverseDeckWatcher",
+        "x": 35,
+        "y": 5,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "Taunt",
+        "x": 10,
+        "y": 17,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "BouncingStone",
+        "x": 27,
+        "y": 4,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "SpawnCat",
+        "x": 27,
+        "y": 9,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "BatVolley",
+        "x": 27,
+        "y": 8,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "RichterCross",
+        "x": 23,
+        "y": 7,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Indulgence",
+        "x": 30,
+        "y": 11,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "StartSword",
+        "x": 18,
+        "y": 0,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "QuickSword",
+        "x": 4,
+        "y": 6,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "RevengeSword",
+        "x": 2,
+        "y": 1,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "BackStabber",
+        "x": 9,
+        "y": 1,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Bleeder",
+        "x": 4,
+        "y": 1,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "DualDaggers",
+        "x": 5,
+        "y": 1,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "BroadSword",
+        "x": 7,
+        "y": 1,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Shovel",
+        "x": 2,
+        "y": 6,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "EvilSword",
+        "x": 2,
+        "y": 3,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "BleedCrit",
+        "x": 3,
+        "y": 1,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "SpeedBlade",
+        "x": 11,
+        "y": 7,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "GiantKiller",
+        "x": 12,
+        "y": 11,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "BulletBlade",
+        "x": 17,
+        "y": 13,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "SismicBlade",
+        "x": 18,
+        "y": 13,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Spear",
+        "x": 2,
+        "y": 2,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "ImpaleSpear",
+        "x": 17,
+        "y": 3,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "KingsSpear",
+        "x": 11,
+        "y": 11,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Rapier",
+        "x": 3,
+        "y": 2,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "DashSword",
+        "x": 13,
+        "y": 7,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "StunMace",
+        "x": 3,
+        "y": 6,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "BumpBoots",
+        "x": 1,
+        "y": 6,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "SpikedBoots",
+        "x": 0,
+        "y": 6,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "MultiKickBoots",
+        "x": 0,
+        "y": 7,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "QuickFists",
+        "x": 13,
+        "y": 11,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Whip",
+        "x": 4,
+        "y": 2,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "HookWhip",
+        "x": 14,
+        "y": 6,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "OilSword",
+        "x": 7,
+        "y": 2,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Burner",
+        "x": 6,
+        "y": 2,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "LowHealth",
+        "x": 17,
+        "y": 4,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "PerfectHalberd",
+        "x": 11,
+        "y": 14,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "BehemothHammer",
+        "x": 21,
+        "y": 4,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "TentacleWhip",
+        "x": 26,
+        "y": 2,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "Pan",
+        "x": 23,
+        "y": 6,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "ParryBlade",
+        "x": 30,
+        "y": 2,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "TickScytheLeft",
+        "x": 32,
+        "y": 3,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "TickScytheRight",
+        "x": 32,
+        "y": 2,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "RhythmicBlade",
+        "x": 31,
+        "y": 2,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Crowbar",
+        "x": 27,
+        "y": 3,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "SnakeFang",
+        "x": 30,
+        "y": 5,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "GiantStaff",
+        "x": 29,
+        "y": 5,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "Lantern",
+        "x": 32,
+        "y": 5,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "NotFlyingSword",
+        "x": 29,
+        "y": 7,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Katana",
+        "x": 24,
+        "y": 6,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "ExplosiveCrossBowOffHand",
+        "x": 27,
+        "y": 7,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "Tombstone",
+        "x": 31,
+        "y": 6,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "HeavyAxe",
+        "x": 30,
+        "y": 6,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Club",
+        "x": 32,
+        "y": 6,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "ClubBroken",
+        "x": 33,
+        "y": 6,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "MachetePistol",
+        "x": 28,
+        "y": 8,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "HardLightSword",
+        "x": 25,
+        "y": 6,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "PureNail",
+        "x": 27,
+        "y": 6,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "SkulBone",
+        "x": 28,
+        "y": 6,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Trident",
+        "x": 32,
+        "y": 9,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "HandHook",
+        "x": 28,
+        "y": 7,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Shark",
+        "x": 33,
+        "y": 9,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "ElbowBlades",
+        "x": 34,
+        "y": 8,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "WreckingBall",
+        "x": 32,
+        "y": 8,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "QueenRapier",
+        "x": 33,
+        "y": 8,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "CupidityDagger",
+        "x": 5,
+        "y": 17,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "GoldDigger",
+        "x": 7,
+        "y": 17,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "GoldDiggerEvolved",
+        "x": 6,
+        "y": 17,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "KingScepter",
+        "x": 35,
+        "y": 2,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "BaseballBat",
+        "x": 36,
+        "y": 3,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "NunchuckPan",
+        "x": 24,
+        "y": 10,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Starfury",
+        "x": 34,
+        "y": 4,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "TPSword",
+        "x": 26,
+        "y": 8,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "WiggleWhip",
+        "x": 25,
+        "y": 8,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Bible",
+        "x": 24,
+        "y": 8,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "SnakeSwordWeapon",
+        "x": 26,
+        "y": 9,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "SnakeSwordWeaponAlt",
+        "x": 25,
+        "y": 9,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "SnakeSwordSwap",
+        "x": 28,
+        "y": 9,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "VampireKiller",
+        "x": 28,
+        "y": 4,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "AdeleScythe",
+        "x": 25,
+        "y": 10,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "RichterVampireKiller",
+        "x": 21,
+        "y": 10,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "CombinedTickScythe",
+        "x": 32,
+        "y": 1,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Pistol",
+        "x": 28,
+        "y": 10,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "Scissor",
+        "x": 31,
+        "y": 10,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "Comb",
+        "x": 31,
+        "y": 9,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "Misericord",
+        "x": 28,
+        "y": 11,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "StartBow",
+        "x": 0,
+        "y": 1,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "DualBow",
+        "x": 20,
+        "y": 7,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "InfiniteBow",
+        "x": 10,
+        "y": 3,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "LongBow",
+        "x": 10,
+        "y": 1,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "SonicCrossbow",
+        "x": 19,
+        "y": 13,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "CloseCombatBow",
+        "x": 11,
+        "y": 1,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "FastBow",
+        "x": 9,
+        "y": 3,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "FrostBow",
+        "x": 12,
+        "y": 1,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "CrossBow",
+        "x": 13,
+        "y": 1,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "MultiCrossBow",
+        "x": 18,
+        "y": 6,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "MultiCrossBowOffHand",
+        "x": 25,
+        "y": 7,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "FrostCrossBow",
+        "x": 17,
+        "y": 8,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "ExplosiveCrossBow",
+        "x": 20,
+        "y": 3,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "AlchemicGun",
+        "x": 21,
+        "y": 3,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Boomerang",
+        "x": 21,
+        "y": 5,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "BleedAxe",
+        "x": 16,
+        "y": 13,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "GodAxe",
+        "x": 15,
+        "y": 13,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "ThrowingSpear",
+        "x": 18,
+        "y": 12,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "MarkBow",
+        "x": 18,
+        "y": 8,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "PreciseBow",
+        "x": 20,
+        "y": 4,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "ThrowingKnife",
+        "x": 14,
+        "y": 1,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "LightningWhip",
+        "x": 3,
+        "y": 5,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "ThrowingTorch",
+        "x": 17,
+        "y": 6,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "ThrowingIce",
+        "x": 19,
+        "y": 7,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "FireBall",
+        "x": 5,
+        "y": 2,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "Lightning",
+        "x": 21,
+        "y": 1,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "FlameThrower",
+        "x": 22,
+        "y": 2,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "Freeze",
+        "x": 1,
+        "y": 2,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "MagicSalve",
+        "x": 8,
+        "y": 12,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Blowgun",
+        "x": 28,
+        "y": 2,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "BarrelLauncher",
+        "x": 33,
+        "y": 4,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "HardLightGun",
+        "x": 26,
+        "y": 6,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "ThrowingCards",
+        "x": 30,
+        "y": 7,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "HeavyBow",
+        "x": 34,
+        "y": 9,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "MoneyShooter",
+        "x": 8,
+        "y": 17,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "MagicBow",
+        "x": 23,
+        "y": 10,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "ThrowableStuff",
+        "x": 36,
+        "y": 2,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "LaserGlaive",
+        "x": 33,
+        "y": 3,
+        "BottleItemLable": 10
+    },
+    {
+        "id": "HydraSpell",
+        "x": 10,
+        "y": 16,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "Cross",
+        "x": 23,
+        "y": 7,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "ThrowingAxe",
+        "x": 23,
+        "y": 8,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "MedusaHead",
+        "x": 26,
+        "y": 10,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "Anathema",
+        "x": 29,
+        "y": 11,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "StartShield",
+        "x": 0,
+        "y": 3,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "WarriorShield",
+        "x": 21,
+        "y": 9,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "Shield",
+        "x": 16,
+        "y": 1,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "AreaShield",
+        "x": 22,
+        "y": 8,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "BumpShield",
+        "x": 15,
+        "y": 1,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "Rampart",
+        "x": 17,
+        "y": 1,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "DashShield",
+        "x": 18,
+        "y": 1,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "BloodShield",
+        "x": 19,
+        "y": 1,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "GreedShield",
+        "x": 7,
+        "y": 3,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "SpikeShield",
+        "x": 4,
+        "y": 5,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "ParryShield",
+        "x": 15,
+        "y": 7,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "HoldShield",
+        "x": 14,
+        "y": 7,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "ThunderShield",
+        "x": 17,
+        "y": 12,
+        "BottleItemLable": 4
+    },
+    {
+        "id": "IceShield",
+        "x": 29,
+        "y": 2,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "AlucardShield",
+        "x": 28,
+        "y": 5,
+        "BottleItemLable": 9
+    },
+    {
+        "id": "P_CDR_Kill",
+        "x": 1,
+        "y": 13,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_DmgKill",
+        "x": 2,
+        "y": 9,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_DmgRevenge",
+        "x": 7,
+        "y": 9,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_ManyMobsAround",
+        "x": 2,
+        "y": 14,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_CorruptedHealing",
+        "x": 5,
+        "y": 11,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_DodgeHeal",
+        "x": 7,
+        "y": 15,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_SpeedHeal",
+        "x": 4,
+        "y": 14,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_DmgSkl",
+        "x": 1,
+        "y": 15,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_DmgFirstHit",
+        "x": 3,
+        "y": 15,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_InvisibilityOnKill",
+        "x": 2,
+        "y": 15,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_Backpack_Melee",
+        "x": 1,
+        "y": 18,
+        "BottleItemLable": 8
+    },
+    {
+        "id": "P_DeployedDmg",
+        "x": 7,
+        "y": 10,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_DeathBomb",
+        "x": 6,
+        "y": 10,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_NoMobAround",
+        "x": 5,
+        "y": 10,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_AmmoOnHit",
+        "x": 4,
+        "y": 10,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_DmgSkillRanged",
+        "x": 6,
+        "y": 16,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_DmgPlantedArrow",
+        "x": 8,
+        "y": 15,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_DmgNearRanged",
+        "x": 6,
+        "y": 15,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_ShareDamage",
+        "x": 0,
+        "y": 15,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_Caltrops",
+        "x": 0,
+        "y": 14,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_DodgeSlow",
+        "x": 4,
+        "y": 15,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_CDR_Distance",
+        "x": 0,
+        "y": 13,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_Backpack_Ranged",
+        "x": 0,
+        "y": 18,
+        "BottleItemLable": 7
+    },
+    {
+        "id": "P_ScaledHealth",
+        "x": 4,
+        "y": 9,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_DeathShield",
+        "x": 1,
+        "y": 14,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_CDR_Parry",
+        "x": 3,
+        "y": 13,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_DmgParry",
+        "x": 2,
+        "y": 8,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_HealOnParry",
+        "x": 1,
+        "y": 8,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_HealOnKill",
+        "x": 1,
+        "y": 9,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_Hot",
+        "x": 7,
+        "y": 11,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_Food",
+        "x": 9,
+        "y": 11,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_SuperParry",
+        "x": 4,
+        "y": 12,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_CDR_locked",
+        "x": 1,
+        "y": 17,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_AttackSpeed_Combo",
+        "x": 3,
+        "y": 18,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_Backpack_Shield",
+        "x": 2,
+        "y": 18,
+        "BottleItemLable": 3
+    },
+    {
+        "id": "P_Yolo",
+        "x": 0,
+        "y": 11,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_ColdDmg",
+        "x": 0,
+        "y": 17,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_Rally",
+        "x": 10,
+        "y": 10,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_QuickHeal",
+        "x": 8,
+        "y": 11,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_SpeedBuff",
+        "x": 9,
+        "y": 10,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_Health",
+        "x": 3,
+        "y": 14,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_Curse",
+        "x": 10,
+        "y": 11,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_EasierCurse",
+        "x": 5,
+        "y": 12,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_Traps",
+        "x": 6,
+        "y": 12,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_Disengage",
+        "x": 13,
+        "y": 12,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_Execute_LowHealth",
+        "x": 0,
+        "y": 9,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_CDR_Crit",
+        "x": 4,
+        "y": 13,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_Ammo",
+        "x": 8,
+        "y": 10,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_U28_PerkGoldShield",
+        "x": 8,
+        "y": 16,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_U28_PerkGoldSpeed",
+        "x": 7,
+        "y": 16,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_U28_PerkGoldPerDamage",
+        "x": 9,
+        "y": 16,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_Wishes",
+        "x": 9,
+        "y": 15,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_CursedFlask",
+        "x": 19,
+        "y": 11,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_DamnedVigor",
+        "x": 20,
+        "y": 11,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "P_DemonicForce",
+        "x": 21,
+        "y": 11,
+        "BottleItemLable": 6
+    },
+    {
+        "id": "Flask1",
+        "x": 13,
+        "y": 2,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Flask2",
+        "x": 12,
+        "y": 2,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Flask3",
+        "x": 13,
+        "y": 4,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Flask4",
+        "x": 12,
+        "y": 3,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Money1",
+        "x": 4,
+        "y": 7,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Money2",
+        "x": 5,
+        "y": 7,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Money3",
+        "x": 6,
+        "y": 7,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Money4",
+        "x": 7,
+        "y": 7,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Money5",
+        "x": 21,
+        "y": 7,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "RandomBow",
+        "x": 0,
+        "y": 12,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "RandomShield",
+        "x": 1,
+        "y": 12,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "RandomCC",
+        "x": 2,
+        "y": 12,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Recycling1",
+        "x": 2,
+        "y": 7,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "Recycling2",
+        "x": 3,
+        "y": 7,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "ShopRerolls",
+        "x": 16,
+        "y": 8,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "ShopCategories",
+        "x": 13,
+        "y": 8,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "PokebombUnlock",
+        "x": 15,
+        "y": 8,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "MirrorUnlock",
+        "x": 22,
+        "y": 9,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "ArmoryUnlock",
+        "x": 6,
+        "y": 14,
+        "BottleItemLable": 5
+    },
+    {
+        "id": "BackpackUnlock",
+        "x": 4,
+        "y": 18,
+        "BottleItemLable": 5
+    }
+]

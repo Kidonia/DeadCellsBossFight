@@ -1,0 +1,245 @@
+# This file will automatically update with entries for new content after a build and reload
+
+Items: {
+	homo: {
+		DisplayName: homo
+		Tooltip: ""
+	}
+
+	Yamato: {
+		DisplayName: Yamato
+		Tooltip: ""
+	}
+
+	Homo2: {
+		DisplayName: Homo2
+		Tooltip: ""
+	}
+
+	Homo3: {
+		DisplayName: Homo3
+		Tooltip: ""
+	}
+
+	StartSword: {
+		DisplayName: Start Sword
+		Tooltip: ""
+	}
+
+	PerfectHalberd: {
+		DisplayName: Perfect Halberd
+		Tooltip: ""
+	}
+
+	AdeleScythe: {
+		DisplayName: Adele Scythe
+		Tooltip: ""
+	}
+
+	BleedCrit: {
+		DisplayName: Bleed Crit
+		Tooltip: ""
+	}
+
+	Bleeder: {
+		DisplayName: Bleeder
+		Tooltip: ""
+	}
+
+	BroadSword: {
+		DisplayName: Broad Sword
+		Tooltip: ""
+	}
+
+	CombinedTickScythe: {
+		DisplayName: Combined Tick Scythe
+		Tooltip: ""
+	}
+
+	DualDaggers: {
+		DisplayName: Dual Daggers
+		Tooltip: ""
+	}
+
+	EvilSword: {
+		DisplayName: Evil Sword
+		Tooltip: ""
+	}
+
+	HeavyAxe: {
+		DisplayName: Heavy Axe
+		Tooltip: ""
+	}
+
+	KingsSpear: {
+		DisplayName: Kings Spear
+		Tooltip: ""
+	}
+
+	LowHealth: {
+		DisplayName: Low Health
+		Tooltip: ""
+	}
+
+	OilSword: {
+		DisplayName: Oil Sword
+		Tooltip: ""
+	}
+
+	QueenRapier: {
+		DisplayName: Queen Rapier
+		Tooltip: ""
+	}
+
+	QuickSword: {
+		DisplayName: Quick Sword
+		Tooltip: ""
+	}
+}
+
+Buffs: {
+	Bleed: {
+		DisplayName: Bleed
+		Description: Mods.DeadCellsBossFight.Buffs.Bleed.Description
+	}
+
+	Oil: {
+		DisplayName: Oil
+		Description: Mods.DeadCellsBossFight.Buffs.Oil.Description
+	}
+}
+
+NPCs: {
+	BH.DisplayName: B H
+	Behemoth.DisplayName: Behemoth
+	Queen.DisplayName: Queen
+	Collector.DisplayName: Collector
+}
+
+Projectiles: {
+	RoundTwist.DisplayName: Round Twist
+	RoundTwist2.DisplayName: Round Twist2
+	SmashDownArea.DisplayName: Smash Down Area
+	TeleportAfter.DisplayName: Teleport After
+	TeleportAvailable.DisplayName: Teleport Available
+	TeleportScreenScale.DisplayName: Teleport Screen Scale
+	TeleportWhiteScreen.DisplayName: Teleport White Screen
+	NormalArrow.DisplayName: Normal Arrow
+	QueenRapierCritCut.DisplayName: Queen Rapier Crit Cut
+	QueenRapierCut.DisplayName: Queen Rapier Cut
+	RedLightning.DisplayName: Red Lightning
+	SoulProj.DisplayName: Soul Proj
+	TestTW.DisplayName: Test T W
+	AdeleScytheAtkA.DisplayName: Adele Scythe Atk A
+	AdeleScytheAtkB.DisplayName: Adele Scythe Atk B
+	AdeleScytheAtkC.DisplayName: Adele Scythe Atk C
+	AdeleScytheAtkD.DisplayName: Adele Scythe Atk D
+	AdminAttack.DisplayName: Admin Attack
+	BleedCritAtkA.DisplayName: Bleed Crit Atk A
+	BleedCritAtkB.DisplayName: Bleed Crit Atk B
+	BleedCritAtkC.DisplayName: Bleed Crit Atk C
+	BleederAtkA.DisplayName: Bleeder Atk A
+	BleederAtkB.DisplayName: Bleeder Atk B
+	BroadSwordAtkA.DisplayName: Broad Sword Atk A
+	BroadSwordAtkB.DisplayName: Broad Sword Atk B
+	BroadSwordAtkC.DisplayName: Broad Sword Atk C
+	DualDaggersAtkA.DisplayName: Dual Daggers Atk A
+	DualDaggersAtkB.DisplayName: Dual Daggers Atk B
+	DualDaggersAtkC.DisplayName: Dual Daggers Atk C
+	HeavyAxeAtkA.DisplayName: Heavy Axe Atk A
+	HeavyAxeAtkB.DisplayName: Heavy Axe Atk B
+	HeavyAxeAtkC.DisplayName: Heavy Axe Atk C
+	HeavyAxeAtkD.DisplayName: Heavy Axe Atk D
+	KingsSpearAtkA.DisplayName: Kings Spear Atk A
+	KingsSpearAtkB.DisplayName: Kings Spear Atk B
+	KingsSpearAtkC.DisplayName: Kings Spear Atk C
+	LowHealthAtkA.DisplayName: Low Health Atk A
+	LowHealthAtkB.DisplayName: Low Health Atk B
+	LowHealthAtkC.DisplayName: Low Health Atk C
+	LowHealthAtkD.DisplayName: Low Health Atk D
+	LowHealthAtkE.DisplayName: Low Health Atk E
+	OilSwordAtkA.DisplayName: Oil Sword Atk A
+	OilSwordAtkB.DisplayName: Oil Sword Atk B
+	PerfectHalberdA.DisplayName: Perfect Halberd A
+	PerfectHalberdB.DisplayName: Perfect Halberd B
+	PerfectHalberdC.DisplayName: Perfect Halberd C
+	PerfectHalberdD.DisplayName: Perfect Halberd D
+	QueenRapierAtkA.DisplayName: Queen Rapier Atk A
+	QueenRapierAtkB.DisplayName: Queen Rapier Atk B
+	QueenRapierAtkC.DisplayName: Queen Rapier Atk C
+	StartSwordAtkA.DisplayName: Start Sword Atk A
+	StartSwordAtkB.DisplayName: Start Sword Atk B
+	StartSwordAtkC.DisplayName: Start Sword Atk C
+	TickScytheAtkA1.DisplayName: Tick Scythe Atk A1
+	TickScytheAtkA2.DisplayName: Tick Scythe Atk A2
+	TickScytheAtkB1.DisplayName: Tick Scythe Atk B1
+	TickScytheAtkB2.DisplayName: Tick Scythe Atk B2
+	RollAProj.DisplayName: Roll A Proj
+	RollBProj.DisplayName: Roll B Proj
+	RollCProj.DisplayName: Roll C Proj
+	JumpDownProj.DisplayName: Jump Down Proj
+	JumpUpProj.DisplayName: Jump Up Proj
+	WalkProj.DisplayName: Walk Proj
+	IdleProj.DisplayName: Idle Proj
+	FirePillar.DisplayName: Fire Pillar
+	BeheAtkAarea.DisplayName: Behe Atk Aarea
+	BeheAtkArea.DisplayName: Behe Atk Area
+	QueenSplitScreen.DisplayName: Queen Split Screen
+	QueenSplitBlueLine.DisplayName: Queen Split Blue Line
+	QueenRepelBullets.DisplayName: Queen Repel Bullets
+	QueenParryArea.DisplayName: Queen Parry Area
+	DCScreenFire.DisplayName: D C Screen Fire
+	DCScreenTerrifySentence.DisplayName: D C Screen Terrify Sentence
+	QueenKillPetSummonArea.DisplayName: Queen Kill Pet Summon Area
+	BHHead.DisplayName: B H Head
+	DCHead.DisplayName: D C Head
+	QueenBasicAtkArea.DisplayName: Queen Basic Atk Area
+	QueenccQuickFull.DisplayName: Queencc Quick Full
+	QueenccQuickHighAndLow.DisplayName: Queencc Quick High And Low
+	QueenccQuickHigh.DisplayName: Queencc Quick High
+	QueenshockWave.DisplayName: Queenshock Wave
+	QueenccStrongComboA.DisplayName: Queencc Strong Combo A
+	QueenccStrongOvershield.DisplayName: Queencc Strong Overshield
+	QueendispelAOE.DisplayName: Queendispel A O E
+	testFirePtc.DisplayName: test Fire Ptc
+	QueenccQuickLow.DisplayName: Queencc Quick Low
+	RoundTwistQueen.DisplayName: Round Twist Queen
+	QueenlungeAttack.DisplayName: Queenlunge Attack
+	QueenstompAnswer.DisplayName: Queenstomp Answer
+	DCHeadFire.DisplayName: D C Head Fire
+	DCScreenDrug.DisplayName: D C Screen Drug
+	BasicDialogueBox.DisplayName: Basic Dialogue Box
+	数模.DisplayName: 数模
+	数模二.DisplayName: 数模二
+	MirrorScreenBroken.DisplayName: Mirror Screen Broken
+	Roundtry.DisplayName: Roundtry
+	Linetry.DisplayName: Linetry
+	YamatoHeldProj.DisplayName: Yamato Held Proj
+	Test2.DisplayName: Test2
+	TestBottle.DisplayName: Test Bottle
+	testglow.DisplayName: testglow
+	WallRunProj.DisplayName: Wall Run Proj
+}
+
+Biomes: {
+	BlackBridgeBiome: {
+		DisplayName: Black Bridge Biome
+		TownNPCDialogueName: the Black Bridge
+	}
+
+	QueenArenaBiome: {
+		DisplayName: Queen Arena Biome
+		TownNPCDialogueName: the Queen Arena
+	}
+
+	PrisonBiome: {
+		DisplayName: Prison Biome
+		TownNPCDialogueName: the Prison
+	}
+}
+
+DamageClasses: {
+	BrutalityDamage.DisplayName: Brutality Damage
+	SurvivalDamage.DisplayName: Survival Damage
+	TacticsDamage.DisplayName: Tactics Damage
+}
