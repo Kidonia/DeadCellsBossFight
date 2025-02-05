@@ -236,7 +236,7 @@ public override void OnSpawn(IEntitySource source)
 
     public override bool PreKill()
     {
-        foreach (NPC npc in Main.npc)
+        foreach (NPC npc in Main.ActiveNPCs)
         {
             if (npc.type == ModContent.NPCType<BH>())
                 npc.ai[1] = 1;

@@ -31,7 +31,7 @@ public class QueenRapierAtkC : DC_WeaponAnimation
         CameraBump(2.4f, 1f, 19);
         if (Projectile.frame == HitFrame)
         {
-            Projectile.NewProjectile(Projectile.GetSource_FromAI(), npc.Center + new Vector2(Projectile.velocity.X * 160, 0), Vector2.Zero, ModContent.ProjectileType<QueenRapierCut>(), 0, 0, player.whoAmI, 0);
+            Projectile.NewProjectile(spawner.GetSource_FromAI(), npc.Center + new Vector2(Projectile.velocity.X * 160, 0), Vector2.Zero, ModContent.ProjectileType<QueenRapierCut>(), 0, 0, player.whoAmI, 0);
         }
     }
     public override void PostDraw(Color lightColor)

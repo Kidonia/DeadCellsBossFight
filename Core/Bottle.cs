@@ -104,6 +104,8 @@ public class Bottle
                         int k = Item.NewItem(new EntitySource_DebugCommand("bottlebreak"), this.rp[^2].pos, this.itemType);
                         if (Main.item[k].ModItem is DeadCellsItem DCitem)
                         {
+                            if (DCitem.DualWeaponOffhand)
+                                Main.item[k].active = false;
                             DCitem.ItemLabel = BottleSystem.bottleItemLabels[this.itemInsideIdx];
                             int index = GetHaloTextureIndex(DCitem.ItemLabel);
                             DCitem.HaloTex = AssetsLoader.HaloTexture[index];

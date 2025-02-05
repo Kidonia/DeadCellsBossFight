@@ -502,9 +502,9 @@ public partial class Queen : ModNPC
         IsDealingPlot = true;
         //ActivateDrawTrail();
 
-        foreach(Projectile projectile in Main.projectile)
+        foreach(Projectile projectile in Main.ActiveProjectiles)
         {
-            if(projectile.active && projectile.type == ModContent.ProjectileType<DCHeadFire>())
+            if(projectile.type == ModContent.ProjectileType<DCHeadFire>())
             {
                 projectile.Kill();
             }
@@ -808,7 +808,7 @@ public partial class Queen : ModNPC
             int showBoomDmg = CombatText.NewText(NPC.targetRect, new Color(12, 218, 255), "招架", true, false);
             player.velocity = (player.Center - NPC.Bottom).Normalized() * 6f;
             Main.combatText[showBoomDmg].lifeTime = 70;
-            foreach (Projectile projectile in Main.projectile)
+            foreach (Projectile projectile in Main.ActiveProjectiles)
                 if(projectile.type == ModContent.ProjectileType<QueenParryArea>())
                     projectile.Kill();
             QueenSkillSlot_State1.Clear();
@@ -864,7 +864,7 @@ public partial class Queen : ModNPC
             parryTime = 0;
             int showBoomDmg = CombatText.NewText(NPC.targetRect, new Color(12, 218, 255), "招架", true, false);
             Main.combatText[showBoomDmg].lifeTime = 70;
-            foreach (Projectile proj in Main.projectile)
+            foreach (Projectile proj in Main.ActiveProjectiles)
                 if (proj.type == ModContent.ProjectileType<QueenParryArea>())
                     proj.Kill();
 

@@ -56,9 +56,9 @@ public class DCWorldSystem : ModSystem
         {
             if (Main.npc[BH_whoAmI].active && Main.npc[BH_whoAmI].type == ModContent.NPCType<BH>())
                 return;
-            foreach (NPC Npc in Main.npc)
+            foreach (NPC Npc in Main.ActiveNPCs)
             {
-                if (Npc.type == ModContent.NPCType<BH>() && Npc.active)
+                if (Npc.type == ModContent.NPCType<BH>())
                 {
                     return;
                 }
@@ -77,28 +77,26 @@ public class DCWorldSystem : ModSystem
     {
         if (SubworldSystem.IsActive<QueenArenaWorld>())
         {
-            foreach (Projectile proj in Main.projectile)
+            foreach (Projectile proj in Main.ActiveProjectiles)
             {
-                if (proj.active)
+                //顺手在这检测了，反正能省遍历就省
+                if (startCheckGrappleHookProj && !hasPlayerGrappleHookProj)
                 {
-                    //顺手在这检测了，反正能省遍历就省
-                    if (startCheckGrappleHookProj && !hasPlayerGrappleHookProj)
+                    if (proj.aiStyle == 7 && proj.ai[0] == 2f)
                     {
-                        if (proj.aiStyle == 7 && proj.ai[0] == 2f)
-                        {
-                            hasPlayerGrappleHookProj = true;
-                            break;
-                        }
-                    }
-                    if (startCheckMinionProj && !hasPlayerMinionProj)
-                    {
-                        if (proj.minion || Main.projPet[proj.type])
-                        {
-                            hasPlayerMinionProj = true;
-                            break;
-                        }
+                        hasPlayerGrappleHookProj = true;
+                        break;
                     }
                 }
+                if (startCheckMinionProj && !hasPlayerMinionProj)
+                {
+                    if (proj.minion || Main.projPet[proj.type])
+                    {
+                        hasPlayerMinionProj = true;
+                        break;
+                    }
+                }
+
             }
         }
         base.PostUpdateProjectiles();

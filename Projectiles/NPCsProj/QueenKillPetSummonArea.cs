@@ -35,7 +35,7 @@ public class QueenKillPetSummonArea : ModProjectile
         Vector2 vector2 = vector.SafeNormalize(Vector2.UnitX) * 0.05f;
         Main.player[Projectile.owner].velocity += vector2;
 
-        foreach (Projectile targetProj in Main.projectile)
+        foreach (Projectile targetProj in Main.ActiveProjectiles)
         {
             if ((targetProj.minion || Main.projPet[targetProj.type] || NormalUtils.lightPetProj.Contains(targetProj.type)))
             {

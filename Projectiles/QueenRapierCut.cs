@@ -13,7 +13,8 @@ public class QueenRapierCut : ModProjectile
     //ai[0]是旋转角度，ai[1]是朝向1和-1
     public override string Texture => AssetsLoader.TransparentImg;
     public Player player => Main.player[Projectile.owner];
-
+    public IEntitySource spawnsource;
+    public bool playerSpawn;
     public override void SetDefaults()
     {
         Projectile.width = 420;
@@ -26,6 +27,10 @@ public class QueenRapierCut : ModProjectile
     public override void OnSpawn(IEntitySource source)
     {
         Projectile.rotation = Projectile.ai[0];
+        spawnsource = source;
+        if (source is EntitySource_Parent parentSource)
+            if (parentSource.Entity is NPC)
+                Projectile.hostile = true;
     }
     public override bool ShouldUpdatePosition()
     {
@@ -36,21 +41,15 @@ public class QueenRapierCut : ModProjectile
         //Main.NewText(Projectile.timeLeft);
         if (Projectile.timeLeft == 8)
         {
-            /*s
-            foreach (NPC npc in Main.npc)
-            {
-                if (Collision.CheckAABBvLineCollision(npc.TopLeft, npc.Size, Projectile.Center + (Projectile.Left - Projectile.Center).RotatedBy(Projectile.ai[0]), Projectile.Center + (Projectile.Right - Projectile.Center).RotatedBy(Projectile.ai[0])))
-                {
-                    Projectile.NewProjectile(Entity.GetSource_FromAI(), npc.Center, Vector2.Zero, ModContent.ProjectileType<QueenRapierCritCut>(), 14, 0, player.whoAmI, 0, Projectile.ai[0]);
-                    
-                }
-            }
-            */
-            if (Collision.CheckAABBvLineCollision(player.TopLeft, player.Size, Projectile.Center + (Projectile.Left - Projectile.Center).RotatedBy(Projectile.ai[0]), Projectile.Center + (Projectile.Right - Projectile.Center).RotatedBy(Projectile.ai[0])))
-            {
-                Projectile.NewProjectile(Projectile.GetSource_FromAI(), player.Center, Vector2.Zero, ModContent.ProjectileType<QueenRapierCritCut>(), 100, 0, player.whoAmI, 0, Projectile.ai[0]);
+            if (spawnsource is EntitySource_Parent parentSource)
+                foreach (NPC npc in Main.ActiveNPCs)
+                    if (Collision.CheckAABBvLineCollision(npc.TopLeft, npc.Size, Projectile.Center + (Projectile.Left - Projectile.Center).RotatedBy(Projectile.ai[0]), Projectile.Center + (Projectile.Right - Projectile.Center).RotatedBy(Projectile.ai[0])))
+                        Projectile.NewProjectile(Projectile.GetSource_FromAI(), npc.Center, Vector2.Zero, ModContent.ProjectileType<QueenRapierCritCut>(), 14, 0, player.whoAmI, 0, Projectile.ai[0]);
 
-            }
+            else
+                if (Collision.CheckAABBvLineCollision(player.TopLeft, player.Size, Projectile.Center + (Projectile.Left - Projectile.Center).RotatedBy(Projectile.ai[0]), Projectile.Center + (Projectile.Right - Projectile.Center).RotatedBy(Projectile.ai[0])))
+                    Projectile.NewProjectile(Projectile.GetSource_FromAI(), player.Center, Vector2.Zero, ModContent.ProjectileType<QueenRapierCritCut>(), 100, 0, player.whoAmI, 0, Projectile.ai[0]);
+
         }
 
         if (Projectile.timeLeft < 8)

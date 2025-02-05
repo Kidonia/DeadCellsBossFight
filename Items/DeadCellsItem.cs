@@ -4,7 +4,6 @@ using Terraria.ModLoader;
 using Terraria;
 using Microsoft.Xna.Framework;
 using DeadCellsBossFight.Contents.GlobalChanges;
-using DeadCellsBossFight.Projectiles.WeaponAnimationProj;
 using Terraria.DataStructures;
 using DeadCellsBossFight.Contents.DamageClasses;
 using System;
@@ -24,6 +23,9 @@ public abstract class DeadCellsItem : ModItem
     public DCPlayer playerComboAttack => player.GetModPlayer<DCPlayer>();
     public int iconX;
     public int iconY;
+    public bool DualWeaponBase;
+    public bool DualWeaponOffhand;
+    public int DualWeaponOffhandItemType;
 
     /// <summary>
     /// 物体的流派
@@ -212,6 +214,7 @@ public abstract class DeadCellsItem : ModItem
 
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
+        Main.NewText(type);
         Projectile.NewProjectile(player.GetSource_FromAI(), Main.MouseWorld, Vector2.Zero, type, damage, knockback, -1, 1);
         return false;
     }

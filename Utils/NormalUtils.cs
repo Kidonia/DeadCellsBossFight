@@ -584,7 +584,7 @@ public class NormalUtils
     /// </summary>
     public static void ClearMoveProjs()
     {
-        foreach (Projectile projectile in Main.projectile)//清除移动弹幕
+        foreach (Projectile projectile in Main.ActiveProjectiles)//清除移动弹幕
         {
             if (modAnimProjList.Contains(projectile.type))
                 projectile.Kill();

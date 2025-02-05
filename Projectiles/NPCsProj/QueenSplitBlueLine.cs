@@ -86,7 +86,7 @@ public class QueenSplitBlueLine : ModProjectile
             }
             if(Projectile.timeLeft == 385 && Projectile.ai[2] < 4)
             {
-                foreach(Projectile projectile in Main.projectile)
+                foreach(Projectile projectile in Main.ActiveProjectiles)
                 {
                     if(projectile.type == Projectile.type)
                         Projectile.NewProjectile(Projectile.GetSource_FromAI(), projectile.Center, Vector2.Zero, ModContent.ProjectileType<QueenSplitScreen>(), Projectile.damage, Projectile.knockBack, projectile.owner, 0, projectile.ai[1], projectile.ai[0]);

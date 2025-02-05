@@ -95,6 +95,16 @@ Items: {
 		DisplayName: Quick Sword
 		Tooltip: ""
 	}
+
+	TickScytheLeft: {
+		DisplayName: Tick Scythe Left
+		Tooltip: ""
+	}
+
+	TickScytheRight: {
+		DisplayName: Tick Scythe Right
+		Tooltip: ""
+	}
 }
 
 Buffs: {

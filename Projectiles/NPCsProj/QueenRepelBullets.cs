@@ -29,10 +29,10 @@ public class QueenRepelBullets : ModProjectile
     }
     public override void AI()
     {
-        foreach (NPC npc in Main.npc)
+        foreach (NPC npc in Main.ActiveNPCs)
         {
             // 更新弹幕位置，史
-            if (npc.type == ModContent.NPCType<Queen>() && npc.active)
+            if (npc.type == ModContent.NPCType<Queen>())
             {
                 Projectile.Center = (npc.direction > 0 ? npc.Right : npc.Left) + new Vector2(140, 0) * npc.direction;
             }

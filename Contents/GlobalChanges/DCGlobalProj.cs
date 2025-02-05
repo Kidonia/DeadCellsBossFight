@@ -89,10 +89,10 @@ public class DCGlobalProj : GlobalProjectile
                 if (projectile.sentry)
                 {
 
-                    foreach (NPC npc in Main.npc)
+                    foreach (NPC npc in Main.ActiveNPCs)
                     {
                         // 女王
-                        if (npc.type == ModContent.NPCType<Queen>() && npc.active && npc.ai[0] == -1 && projectile.aiStyle > 0)
+                        if (npc.type == ModContent.NPCType<Queen>() && npc.ai[0] == -1 && projectile.aiStyle > 0)
                         {
                             //Main.NewText(projectile.Center.Y);
                             // ai[0]控制摧毁炮塔

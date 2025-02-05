@@ -521,3 +521,60 @@ public class CombinedTickScythe : DeadCellsItem
 
 
 }
+public class TickScytheLeft : DeadCellsItem
+{
+    public override void SetDefaults()
+    {
+        iconX = 32;
+        iconY = 3;
+        DualWeaponBase = true;
+        DualWeaponOffhandItemType = ModContent.ItemType<TickScytheRight>();
+        SetWeaponDefaults(SurvivalDamage.Instance, 24, 2f, 2, 6, 1500);
+    }
+
+    public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+    {
+        //大概就这么写。
+        if (FirstAttack())
+        {
+            type = ModContent.ProjectileType<TickScytheAtkB1>();//暴击原理写在B1里了
+            damage = DamageMul(0.75f);
+            InitialNextComboAttack(120, 8); //可接上第二段攻击时间间隔， 第二段攻击的前摇
+        }
+        if (CanNextAttack(2))
+        {
+            type = ModContent.ProjectileType<TickScytheAtkB2>();
+            damage = DamageMul(0.88f);
+            FinalComboAttack(5); //后摇
+        }
+    }
+
+
+}
+public class TickScytheRight : DeadCellsItem
+{
+    public override void SetDefaults()
+    {
+        iconX = 32;
+        iconY = 3;
+        DualWeaponOffhand = true;
+        SetWeaponDefaults(SurvivalDamage.Instance, 24, 2f, 2, 6, 1500);
+    }
+
+    public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
+    {
+        if (FirstAttack())//能进行第二段攻击
+        {
+            type = ModContent.ProjectileType<TickScytheAtkA1>();
+            InitialNextComboAttack(160, 4);
+        }
+        if (CanNextAttack(2))
+        {
+            type = ModContent.ProjectileType<TickScytheAtkA2>();
+            damage = DamageMul(1.2f);
+            FinalComboAttack(8); //后摇
+        }
+    }
+
+
+}

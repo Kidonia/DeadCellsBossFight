@@ -540,8 +540,8 @@ public class Collector : ModNPC
 
         if (spawnInfo.Player.ZoneShimmer)
         {
-            foreach (NPC npc in Main.npc)
-                if (npc.type == ModContent.NPCType<Collector>() && npc.active)
+            foreach (NPC npc in Main.ActiveNPCs)
+                if (npc.type == ModContent.NPCType<Collector>())
                     return 0f;
 
             return 1f;
