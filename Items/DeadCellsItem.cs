@@ -1,16 +1,15 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Terraria.GameContent;
-using Terraria.ModLoader;
-using Terraria;
-using Microsoft.Xna.Framework;
+﻿using DeadCellsBossFight.Contents.DamageClasses;
 using DeadCellsBossFight.Contents.GlobalChanges;
-using Terraria.DataStructures;
-using DeadCellsBossFight.Contents.DamageClasses;
-using System;
-using SubworldLibrary;
 using DeadCellsBossFight.Contents.SubWorlds;
 using DeadCellsBossFight.Core;
-using DeadCellsBossFight.NPCs;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using SubworldLibrary;
+using System;
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.GameContent;
+using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
 namespace DeadCellsBossFight.Items;
@@ -21,32 +20,49 @@ public abstract class DeadCellsItem : ModItem
     public override string Texture => "DeadCellsBossFight/Assets/cardIcons";
     public Player player => Main.player[Main.myPlayer];
     public DCPlayer playerComboAttack => player.GetModPlayer<DCPlayer>();
+    /// <summary>
+    /// 图标在cardIcons里的水平位置（每24像素），通过json传入。其被赋值于<see cref="BottleSystem.LoadBottleJSON"/>
+    /// </summary>
     public int iconX;
+    /// <summary>
+    /// 图标在cardIcons里的垂直位置（每24像素），通过json传入。其被赋值于<see cref="BottleSystem.LoadBottleJSON"/>
+    /// </summary>
     public int iconY;
-    public bool DualWeaponBase;
-    public bool DualWeaponOffhand;
-    public int DualWeaponOffhandItemType;
 
     /// <summary>
-    /// 物体的流派
+    /// 物体的流派，包括双卷轴，每个流派（红，紫绿，无色）都有一个，详细另见：<see cref="BottleItemLable"/>。其被赋值于<see cref="BottleSystem.LoadBottleJSON"/>
     /// </summary>
     public int ItemLabel = -1;
 
     /// <summary>
-    /// 物体置于世界时环绕的光环的材质
+    /// 存放物体的流派颜色，影响地上光效材质，数值范围0,1,2,3。其被赋值于<see cref="BottleSystem.LoadBottleJSON"/>
     /// </summary>
-    public Texture2D HaloTex;
-    public Color haloColorRight;
-    public Color haloColorLeft;
+    public int colorIdx1;
 
-    public bool DoubleSect;
+    /// <summary>
+    /// 存放物体的流派颜色，数值范围0,1,2,3。其被赋值于<see cref="BottleSystem.LoadBottleJSON"/>
+    /// </summary>
+    public int colorIdx2;
+
+    public bool DualWeaponBase;
+    public bool DualWeaponOffhand;
+    public int DualWeaponOffhandItemType;
 
     public bool IsWeapon = false;
     public bool IsSkill = false;
     public bool IsMutation = false;
 
     public bool AlphaDrawIconRequired = false;
-
+    public override void OnSpawn(IEntitySource source)
+    {
+        if(DualWeaponOffhand)
+            Main.item[Item.whoAmI].active = false;
+        base.OnSpawn(source);
+    }
+    public override void SetStaticDefaults()
+    {
+        base.SetStaticDefaults();
+    }
     public virtual void SetWeaponDefaults(DamageClass damageType, int damage, float knockback, int usetime, int useAnimation, int sellpricefromCDB, int useStyle = 1, int crit = 0, int rare = 10, int shoot = 10, float shootSpeed = 1f, int width = 48, int height = 48, bool material = false, bool noMelee = true, bool autoReuse = false)
     {
         IsWeapon = true;
@@ -64,7 +80,7 @@ public abstract class DeadCellsItem : ModItem
         Item.shootSpeed = shootSpeed;
         Item.width = width;//icon默认48宽
         Item.height = height;//icon默认48高
-
+        
         Item.material = material;
         Item.noMelee = noMelee;
         Item.autoReuse = autoReuse;//自动使用
@@ -125,7 +141,10 @@ public abstract class DeadCellsItem : ModItem
         {
 
             float haloRotation = (MathHelper.Pi * i) / 6 + Main.GlobalTimeWrappedHourly / 2; // 外圈
-            Color haloDrawColor = HaloColorLerp(haloColorRight, haloColorLeft, haloRotation);
+            Color haloDrawColor = HaloColorLerp(AssetsLoader.ThreeSectColor[colorIdx1], AssetsLoader.ThreeSectColor[colorIdx2], haloRotation);
+
+            // 使用第一个颜色，未排序的数组确保随机性。
+            Texture2D HaloTex = AssetsLoader.HaloTexture[colorIdx1];
 
             spriteBatch.Draw(HaloTex, haloDrawPosition, null, haloDrawColor, haloRotation, haloOrigin, basicScale, SpriteEffects.None, 0f);
             spriteBatch.Draw(HaloTex, haloDrawPosition, null, haloDrawColor, haloRotation - Main.rand.NextFloat(MathHelper.Pi / 45), haloOrigin, basicScale, SpriteEffects.None, 0f);
@@ -133,7 +152,7 @@ public abstract class DeadCellsItem : ModItem
 
             float haloRotation2 = haloRotation - MathHelper.Pi / 12; // 内圈
 
-            Color haloDrawColor2 = HaloColorLerp(haloColorRight, haloColorLeft, haloRotation2);
+            Color haloDrawColor2 = HaloColorLerp(AssetsLoader.ThreeSectColor[colorIdx1], AssetsLoader.ThreeSectColor[colorIdx2], haloRotation2);
             haloDrawColor2.A /= 2;
 
             spriteBatch.Draw(HaloTex, haloDrawPosition, null, haloDrawColor2, haloRotation2, haloOrigin2, basicScale, SpriteEffects.None, 0f);
@@ -150,7 +169,7 @@ public abstract class DeadCellsItem : ModItem
     }
     private static Color HaloColorLerp(Color color1, Color color2, float haloRotation)
     {
-        if(color2 == Color.Black)
+        if(color2 == color1)
             return color1;
         double value = Math.Abs(Math.Sin(haloRotation / 2));
         if (value < 0.642787640) // Math.Sin(MathHelper.Pi * 40 / 180)
@@ -163,17 +182,14 @@ public abstract class DeadCellsItem : ModItem
             return color3;
         }
     }
-    public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
-    {
-        base.PostDrawInWorld(spriteBatch, lightColor, alphaColor, rotation, scale, whoAmI);
-    }
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                               吸引物品，受细胞人影响
 
     public override bool GrabStyle(Player player)
     {
-        if(SubworldSystem.IsActive<PrisonWorld>() && DCWorldSystem.BH_active)
+        if(DCWorldSystem.BH_active && SubworldSystem.IsActive<PrisonWorld>())
         {
             NPC beheaded = Main.npc[DCWorldSystem.BH_whoAmI];
             Main.NewText((beheaded.Center - Item.Center).Length());
@@ -297,32 +313,10 @@ public abstract class DeadCellsItem : ModItem
     */
     public override void SaveData(TagCompound tag)
     {
-        if (ItemLabel > -1)
-        {
-            tag["ItemLabel"] = ItemLabel;
-        }
         base.SaveData(tag);
     }
     public override void LoadData(TagCompound tag) 
     {
-        try
-        {
-            ItemLabel = (int)tag["ItemLabel"];
-            int index = Bottle.GetHaloTextureIndex(ItemLabel);
-            HaloTex = AssetsLoader.HaloTexture[index];
-            haloColorRight = AssetsLoader.ThreeSectColor[index];
-            haloColorLeft = ItemLabel switch
-            {
-                4 => AssetsLoader.ThreeSectColor[3 - index],
-                9 => AssetsLoader.ThreeSectColor[2 - index],
-                10 => AssetsLoader.ThreeSectColor[1 - index],
-                _ => Color.Black,
-            };
-        }
-        catch
-        {
-
-        }
         base.LoadData(tag);
     }
 }

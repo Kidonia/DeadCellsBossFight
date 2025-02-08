@@ -10,6 +10,8 @@ using System.IO;
 using Newtonsoft.Json.Linq;
 using SubworldLibrary;
 using DeadCellsBossFight.Contents.SubWorlds;
+using DeadCellsBossFight.Items;
+using System.Linq;
 
 namespace DeadCellsBossFight.Core;
 
@@ -36,9 +38,6 @@ public class BottleSystem : ModSystem
 
     public override void Load()
     {
-
-
-
         PrisonChain = ModContent.Request<Texture2D>("DeadCellsBossFight/Contents/Biomes/Prison/PrisonElements/PrisonChain", AssetRequestMode.ImmediateLoad).Value;
         cardIcons = ModContent.Request<Texture2D>("DeadCellsBossFight/Assets/cardIcons", AssetRequestMode.ImmediateLoad).Value;
 
@@ -254,16 +253,42 @@ public class BottleSystem : ModSystem
         JArray dataArray = JArray.Parse(json);
 
         // 遍历每一条数据，将 x, y 存入 positions，将 BottleItemLable 存入 bottleItemLabels
-        foreach (JObject item in dataArray)
+        
+        foreach (JObject item in dataArray.Cast<JObject>())
         {
-            
-            float x = item["x"].Value<float>();
-            float y = item["y"].Value<float>();
+            int x = item["x"].Value<int>();
+            int y = item["y"].Value<int>();
             int bottleItemLabel = item["BottleItemLable"].Value<int>();
 
             string name = item["id"].Value<string>();
-            if (DeadCellsBossFight.Instance.TryFind<ModItem>(name, out ModItem modItem))
-                bottleItemTypes.Add(modItem.Type);
+            Console.WriteLine(name);
+            if (ModContent.TryFind<ModItem>(name, out ModItem modItem))
+                {
+                Console.WriteLine();
+                Console.WriteLine(modItem.Type);
+                if (ModContent.TryFind<DeadCellsItem>(name, out DeadCellsItem aa))
+                    Console.WriteLine("yes!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                else
+                    Console.WriteLine("no!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                bottleItemTypes.Add(modItem.Type); // 游戏内Item的type
+                if (modItem is DeadCellsItem DCitem)
+                {
+                    // 赋值给对应武器。相当于setdefault
+                    DCitem.iconX = x;
+                    DCitem.iconY = y;
+                    DCitem.ItemLabel = bottleItemLabel;
+                    int index = Bottle.GetHaloTextureIndex(bottleItemLabel);
+                    DCitem.colorIdx1 = index;
+                    // 对于多流派次要颜色进行赋值
+                    DCitem.colorIdx2 = DCitem.ItemLabel switch
+                    {
+                        4 => 3 - index,
+                        9 => 2 - index,
+                        10 => 1 - index,
+                        _ => index,
+                    };
+                }
+            }
             else
                 bottleItemTypes.Add(-1);
 

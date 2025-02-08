@@ -51,6 +51,16 @@ public class AssetsLoader
     public static Texture2D Shield3;
     public static Texture2D boxCollecorDialog;
     public static Texture2D boxMain;
+
+    public static Texture2D skillBg;
+    public static Texture2D skillSlotBi;
+    public static Texture2D skillSlotBot;
+    public static Texture2D skillSlotTop;
+    public static Texture2D skillSlotFull;
+    public static Texture2D skillSlotColorless;
+    public static Texture2D skillSlotLegendary;
+    public static Texture2D skillSlotBg;
+
     public static Texture2D tri;
     public static Texture2D roundtry;
     public static Texture2D roundtry2;
@@ -104,7 +114,8 @@ public class AssetsLoader
     [
         new Color(236, 36, 36), // 红
         new Color(160, 81, 255), // 紫
-        new Color(23, 206, 107) // 绿
+        new Color(23, 206, 107), // 绿
+        new Color(51, 69, 106) // UI里没有物品时UI的颜色
     ];
 
     public static Dictionary<string, Dictionary<int, DCAnimPic>> AnimAtlas = new();//玩家武器动作的总字典
@@ -145,6 +156,7 @@ public class AssetsLoader
     public static Effect drugEffect; // 屏幕扭曲，喝药头晕
     public static Effect RadialBlur; // 径向模糊
     public static Effect filter; // 滤镜
+    public static Effect SkillUIColor; // 装备&技能的UI颜色添加
 
     /// <summary>
     ///    textures   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -294,6 +306,7 @@ public class AssetsLoader
         drugEffect = GetEffect("DeadCellsBossFight/Effects/drug");
         RadialBlur = GetEffect("DeadCellsBossFight/Effects/RadialBlur");
         filter = GetEffect("DeadCellsBossFight/Effects/filter");
+        SkillUIColor = GetEffect("DeadCellsBossFight/Effects/SkillUIColor");
 
         nsSmokeMask = GetTex("DeadCellsBossFight/Assets/Cool/smokeMask");
         nsPerlinNoise = GetTex("DeadCellsBossFight/Assets/Cool/perlinNoise");
@@ -326,8 +339,19 @@ public class AssetsLoader
         Shield2 = GetTex("DeadCellsBossFight/Assets/shieldBubble");
         Shield3 = GetTex("DeadCellsBossFight/Assets/fxShieldBubble");
 
-        boxCollecorDialog = GetTex("DeadCellsBossFight/Assets/boxCollecorDialog");
-        boxMain = GetTex("DeadCellsBossFight/Assets/boxMain");
+        boxCollecorDialog = GetTex("DeadCellsBossFight/Assets/UIAssets/boxCollecorDialog");
+        boxMain = GetTex("DeadCellsBossFight/Assets/UIAssets/boxMain");
+
+        skillBg = GetTex("DeadCellsBossFight/Assets/UIAssets/skillBg");
+        skillSlotBi = GetTex("DeadCellsBossFight/Assets/UIAssets/skillSlotBi");
+        skillSlotBot = GetTex("DeadCellsBossFight/Assets/UIAssets/skillSlotBot");
+        skillSlotTop = GetTex("DeadCellsBossFight/Assets/UIAssets/skillSlotTop");
+        skillSlotFull = GetTex("DeadCellsBossFight/Assets/UIAssets/skillSlotFull");
+        skillSlotColorless = GetTex("DeadCellsBossFight/Assets/UIAssets/skillSlotColorless");
+        skillSlotLegendary = GetTex("DeadCellsBossFight/Assets/UIAssets/skillSlotLegendary");
+        skillSlotBg = GetTex("DeadCellsBossFight/Assets/UIAssets/skillSlotBg");
+
+
         tri = GetTex("DeadCellsBossFight/Assets/tri");
         roundtry = GetTex("DeadCellsBossFight/Assets/roundtry");
         roundtry2 = GetTex("DeadCellsBossFight/Assets/roundtry2");
@@ -892,6 +916,7 @@ public class AssetsLoader
         drugEffect = null;
         RadialBlur = null;
         filter = null;
+        SkillUIColor = null;
 
         BlackDot = null;
         WhiteDot = null;

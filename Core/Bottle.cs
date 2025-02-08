@@ -12,7 +12,7 @@ using Terraria.DataStructures;
 namespace DeadCellsBossFight.Core;
 
 /// <summary>
-/// 物品的卷轴颜色，别动它，哦内盖
+/// 物品的卷轴颜色，也就是那些int itemLabel，只不过用enum看着清晰，别动它，哦内盖
 /// </summary>
 public enum BottleItemLable : int
 {
@@ -40,15 +40,21 @@ public class Bottle
     /// </summary>
     public int bottleTextureType = 0;
 
+    /// <summary>
+    /// 瓶内是否有物品
+    /// </summary>
     public bool hasItemInside = false;
     /// <summary>
     /// 0:空瓶，1:碎瓶1，2:碎瓶2
     /// </summary>
     public int noItemBottleType = 0; 
 
-    public int itemInsideIdx;
     /// <summary>
-    /// 瓶内物体的 type，默认 -1
+    /// 第几个瓶子，一共二百多
+    /// </summary>
+    public int bottleIndex;
+    /// <summary>
+    /// 瓶内物体在泰拉模组里的 type，未完成则默认 -1
     /// </summary>
     public int itemType = -1;
 
@@ -80,7 +86,7 @@ public class Bottle
         {
             this.noItemBottleType = Main.rand.Next(3);
         }
-        this.itemInsideIdx = itemInsideIdx;
+        this.bottleIndex = itemInsideIdx;
         this.itemType = itemType;
 
         this.active = true;
@@ -102,20 +108,28 @@ public class Bottle
                     if (this.itemType > 0)
                     {
                         int k = Item.NewItem(new EntitySource_DebugCommand("bottlebreak"), this.rp[^2].pos, this.itemType);
+
+                        if (DeadCellsBossFight.Instance.TryFind<DeadCellsItem>(Main.item[k].ModItem.Name, out DeadCellsItem aa))
+                        {
+                            Main.NewText(aa.Name);
+                        }
                         if (Main.item[k].ModItem is DeadCellsItem DCitem)
                         {
                             if (DCitem.DualWeaponOffhand)
                                 Main.item[k].active = false;
-                            DCitem.ItemLabel = BottleSystem.bottleItemLabels[this.itemInsideIdx];
-                            int index = GetHaloTextureIndex(DCitem.ItemLabel);
-                            DCitem.HaloTex = AssetsLoader.HaloTexture[index];
-                            DCitem.haloColorRight = AssetsLoader.ThreeSectColor[index];
-                            DCitem.haloColorLeft = DCitem.ItemLabel switch
+                            // 赋值给对应武器。相当于setdefault
+                            DCitem.iconX = (int)BottleSystem.IconPos[this.bottleIndex].X;
+                            DCitem.iconY = (int)BottleSystem.IconPos[this.bottleIndex].Y;
+                            DCitem.ItemLabel = BottleSystem.bottleItemLabels[this.bottleIndex];
+                            int index = Bottle.GetHaloTextureIndex(DCitem.ItemLabel);
+                            DCitem.colorIdx1 = index;
+                            // 对于多流派次要颜色进行赋值
+                            DCitem.colorIdx2 = DCitem.ItemLabel switch
                             {
-                                4 => AssetsLoader.ThreeSectColor[3 - index],
-                                9 => AssetsLoader.ThreeSectColor[2 - index],
-                                10 => AssetsLoader.ThreeSectColor[1 - index],
-                                _ => Color.Black,
+                                4 => 3 - index,
+                                9 => 2 - index,
+                                10 => 1 - index,
+                                _ => index,
                             };
                         }
                     }
@@ -134,7 +148,11 @@ public class Bottle
             }
         }
     }
-
+    /// <summary>
+    /// 获取物体掉在地上时环绕光环的材质，注意对于双卷轴物品返回两个流派中的随机一项。0：暴虐，1：战术，2：生存，3：透明其他
+    /// </summary>
+    /// <param name="bottleItemLabel"></param>
+    /// <returns></returns>
     public static int GetHaloTextureIndex(int bottleItemLabel)
     {
         return bottleItemLabel switch
@@ -188,23 +206,27 @@ public class Bottle
             switch (this.bottleTextureType)
             {
                 case 0:
-                    return BottleSystem.bottleTexA[(BottleItemLable)BottleSystem.bottleItemLabels[this.itemInsideIdx]];
+                    return BottleSystem.bottleTexA[(BottleItemLable)BottleSystem.bottleItemLabels[this.bottleIndex]];
                 case 1:
-                    return BottleSystem.bottleTexB[(BottleItemLable)BottleSystem.bottleItemLabels[this.itemInsideIdx]];
+                    return BottleSystem.bottleTexB[(BottleItemLable)BottleSystem.bottleItemLabels[this.bottleIndex]];
                 case 2:
-                    return BottleSystem.bottleTexC[(BottleItemLable)BottleSystem.bottleItemLabels[this.itemInsideIdx]];
+                    return BottleSystem.bottleTexC[(BottleItemLable)BottleSystem.bottleItemLabels[this.bottleIndex]];
                 default:
                     return AssetsLoader.TransparentDot;
             }
         }
     }
+    /// <summary>
+    /// 获取图标的位置
+    /// </summary>
+    /// <returns></returns>
     public Rectangle GetIconRectangle()
     {
         if (!hasItemInside) // 无物
             return new(0, 0, 1, 1);
         else
         {
-            Vector2 iconPos = BottleSystem.IconPos[this.itemInsideIdx];
+            Vector2 iconPos = BottleSystem.IconPos[this.bottleIndex];
             return new((int)iconPos.X * 24, (int)iconPos.Y * 24, 24, 24);
         }
     }

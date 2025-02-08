@@ -11,8 +11,6 @@ public class StartSword : DeadCellsItem
 
     public override void SetDefaults()
     {
-        iconX = 18;
-        iconY = 0;
         SetWeaponDefaults(DamageClass.Melee, 7, 2f, 2, 2, 1);
     }
     public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -41,8 +39,6 @@ public class QuickSword : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 4;
-        iconY = 6;
         SetWeaponDefaults(BrutalityDamage.Instance, 4, 2f, 2, 2, 1);
     }
     /*
@@ -91,8 +87,6 @@ public class Bleeder : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 4;
-        iconY = 1;
         SetWeaponDefaults(BrutalityDamage.Instance, 12, 2f, 2, 6, 1500);
     }
 
@@ -117,8 +111,6 @@ public class DualDaggers : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 5;
-        iconY = 1;
         SetWeaponDefaults(BrutalityDamage.Instance, 15, 2.4f, 2, 6, 1800);
     }
     public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -145,8 +137,6 @@ public class BroadSword : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 7;
-        iconY = 1;
         SetWeaponDefaults(SurvivalDamage.Instance, 16, 2.4f, 2, 6, 1750);
     }
     public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -173,8 +163,6 @@ public class EvilSword : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 2;
-        iconY = 3;
         SetWeaponDefaults(BrutalityDamage.Instance, 25, 2.1f, 2, 6, 2500);
     }
     public override void HoldItem(Player player)
@@ -206,8 +194,6 @@ public class BleedCrit : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 3;
-        iconY = 1;
         SetWeaponDefaults(BrutalityDamage.Instance, 20, 2f, 2, 6, 1500);
     }
 
@@ -246,8 +232,6 @@ public class KingsSpear : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 11;
-        iconY = 11;
         SetWeaponDefaults(SurvivalDamage.Instance, 18, 2f, 2, 6, 2000);
     }
     public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -276,8 +260,6 @@ public class OilSword : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 7;
-        iconY = 2;
         SetWeaponDefaults(BrutalityDamage.Instance, 30, 2f, 2, 6, 1500);
     }
 
@@ -303,8 +285,6 @@ public class LowHealth : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 17;
-        iconY = 4;
         SetWeaponDefaults(BrutalityDamage.Instance, 14, 2f, 2, 6, 1500);
     }
 
@@ -345,8 +325,6 @@ public class PerfectHalberd : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 11;
-        iconY = 14;
         SetWeaponDefaults(SurvivalDamage.Instance, 18, 1.8f, 2, 6, 1750);
     }
     public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -382,8 +360,6 @@ public class HeavyAxe : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 30;
-        iconY = 6;
         SetWeaponDefaults(SurvivalDamage.Instance, 24, 2f, 2, 6, 1750);
     }
     public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -420,8 +396,6 @@ public class QueenRapier : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 33;
-        iconY = 8;
         SetWeaponDefaults(BrutalityDamage.Instance, 25, 2.1f, 2, 6, 2500);
     }
 
@@ -450,8 +424,6 @@ public class AdeleScythe : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 25;
-        iconY = 10;
         SetWeaponDefaults(SurvivalDamage.Instance, 14, 1.6f, 2, 6, 2000);
     }
     public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -486,8 +458,6 @@ public class CombinedTickScythe : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 32;
-        iconY = 1;
         SetWeaponDefaults(SurvivalDamage.Instance, 24, 2f, 2, 6, 1500);
     }
 
@@ -525,8 +495,6 @@ public class TickScytheLeft : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 32;
-        iconY = 3;
         DualWeaponBase = true;
         DualWeaponOffhandItemType = ModContent.ItemType<TickScytheRight>();
         SetWeaponDefaults(SurvivalDamage.Instance, 24, 2f, 2, 6, 1500);
@@ -555,8 +523,6 @@ public class TickScytheRight : DeadCellsItem
 {
     public override void SetDefaults()
     {
-        iconX = 32;
-        iconY = 3;
         DualWeaponOffhand = true;
         SetWeaponDefaults(SurvivalDamage.Instance, 24, 2f, 2, 6, 1500);
     }

@@ -10,6 +10,7 @@
     <None Remove="effects\drug.fx" />
     <None Remove="effects\filter.fx" />
     <None Remove="effects\RadialBlur.fx" />
+    <None Remove="Effects\SkillUIColor.fx" />
     <None Remove="NPCs\ExtraBosses\Behemoth.png" />
     <None Remove="NPCs\ExtraBosses\Behemoth_Head_Boss.png" />
   </ItemGroup>
