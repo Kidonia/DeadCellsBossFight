@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ReLogic.Content;
 using ReLogic.Graphics;
@@ -278,6 +279,7 @@ public class AssetsLoader
     public static DynamicSpriteFont TryTextFont;
     public static DynamicSpriteFont CastleVaniaFont;
 
+    public static List<DCIconJSONMsg> iconLabelMsgList = new();
     /// <summary>
     ///  end  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// </summary>
@@ -285,6 +287,18 @@ public class AssetsLoader
     {
         // TryTextFont = ModContent.Request<DynamicSpriteFont>("DeadCellsBossFight/Assets/Fonts/TryFont", AssetRequestMode.ImmediateLoad).Value;
         CastleVaniaFont = ModContent.Request<DynamicSpriteFont>("DeadCellsBossFight/Assets/Fonts/CastleVaniaFont-en", AssetRequestMode.ImmediateLoad).Value;
+
+        // 读取 JSON 文件
+        // string json = File.ReadAllText(filePath);
+        string json;
+        Stream streamJSON = DeadCellsBossFight.Instance.GetFileStream("Assets/icon.json");
+        using( StreamReader sr = new StreamReader(streamJSON))
+        { 
+            // 读取整个文件内容为字符串
+            json = sr.ReadToEnd();
+        }
+        // 反序列化 JSON
+        iconLabelMsgList  = JsonConvert.DeserializeObject<List<DCIconJSONMsg>>(json);
 
         AnimAtlas = Expand(AnimAtlas, "Assets/beheadedModHelper.atlas");
         fxAtlas = Expand(fxAtlas, "Assets/fxWeapon.atlas");
@@ -995,4 +1009,11 @@ public class AssetsLoader
         CastleVaniaFont = null;
     }
 
+}
+public class DCIconJSONMsg
+{
+    public string Id { get; set; }
+    public int X { get; set; }
+    public int Y { get; set; }
+    public int BottleItemLable { get; set; }
 }

@@ -117,20 +117,6 @@ public class Bottle
                         {
                             if (DCitem.DualWeaponOffhand)
                                 Main.item[k].active = false;
-                            // 赋值给对应武器。相当于setdefault
-                            DCitem.iconX = (int)BottleSystem.IconPos[this.bottleIndex].X;
-                            DCitem.iconY = (int)BottleSystem.IconPos[this.bottleIndex].Y;
-                            DCitem.ItemLabel = BottleSystem.bottleItemLabels[this.bottleIndex];
-                            int index = Bottle.GetHaloTextureIndex(DCitem.ItemLabel);
-                            DCitem.colorIdx1 = index;
-                            // 对于多流派次要颜色进行赋值
-                            DCitem.colorIdx2 = DCitem.ItemLabel switch
-                            {
-                                4 => 3 - index,
-                                9 => 2 - index,
-                                10 => 1 - index,
-                                _ => index,
-                            };
                         }
                     }
 

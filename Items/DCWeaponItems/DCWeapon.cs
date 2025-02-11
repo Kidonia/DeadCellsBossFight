@@ -11,7 +11,7 @@ public class StartSword : DeadCellsItem
 
     public override void SetDefaults()
     {
-        SetWeaponDefaults(DamageClass.Melee, 7, 2f, 2, 2, 1);
+        SetWeaponDefaults(BrutalityDamage.Instance, 7, 2f, 2, 2, 1);
     }
     public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
     {

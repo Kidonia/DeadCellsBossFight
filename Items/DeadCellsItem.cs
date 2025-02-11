@@ -4,11 +4,16 @@ using DeadCellsBossFight.Contents.SubWorlds;
 using DeadCellsBossFight.Core;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Newtonsoft.Json;
 using SubworldLibrary;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
+using Terraria.IO;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
@@ -59,12 +64,32 @@ public abstract class DeadCellsItem : ModItem
             Main.item[Item.whoAmI].active = false;
         base.OnSpawn(source);
     }
-    public override void SetStaticDefaults()
+    public void SetIconDefault()
     {
-        base.SetStaticDefaults();
+        // 查找 id 为 当前武器/技能名称 的元素
+        // var cItem = items.Where(item => item.Id == Name);
+        var cItem = AssetsLoader.iconLabelMsgList.FirstOrDefault(item => item.Id == Name);
+        if (cItem != null)
+        {
+            // 赋值给对应武器。相当于setdefault
+            iconX = cItem.X;
+            iconY = cItem.Y;
+            ItemLabel = cItem.BottleItemLable;
+            int index = Bottle.GetHaloTextureIndex(ItemLabel);
+            colorIdx1 = index;
+            // 对于多流派次要颜色进行赋值
+            colorIdx2 = ItemLabel switch
+            {
+                4 => 3 - index,
+                9 => 2 - index,
+                10 => 1 - index,
+                _ => index,
+            };
+        }
     }
     public virtual void SetWeaponDefaults(DamageClass damageType, int damage, float knockback, int usetime, int useAnimation, int sellpricefromCDB, int useStyle = 1, int crit = 0, int rare = 10, int shoot = 10, float shootSpeed = 1f, int width = 48, int height = 48, bool material = false, bool noMelee = true, bool autoReuse = false)
     {
+        SetIconDefault();
         IsWeapon = true;
         Item.DamageType = damageType;//流派
         Item.damage = damage;
@@ -88,6 +113,7 @@ public abstract class DeadCellsItem : ModItem
     }
     public virtual void SetSkillDefaults(DamageClass damageType, int useTime, int useAnimation, int sellpricefromCDB, int width = 48, int height = 48, int useStyle = 10, int rare = 10)
     {
+        SetIconDefault();
         IsSkill = true;
         Item.DamageType = damageType;//流派
         Item.useTime = useTime;
@@ -214,8 +240,10 @@ public abstract class DeadCellsItem : ModItem
         return new Vector2(num, num2);
     }
 
-
-
+    public override void PostUpdate()
+    {
+        base.PostUpdate();
+    }
 
 
     //
@@ -320,4 +348,6 @@ public abstract class DeadCellsItem : ModItem
         base.LoadData(tag);
     }
 }
+// 定义 JSON 数据对应的类
+
 

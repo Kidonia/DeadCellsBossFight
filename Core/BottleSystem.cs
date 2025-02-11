@@ -245,10 +245,12 @@ public class BottleSystem : ModSystem
         // 读取 JSON 文件
         // string json = File.ReadAllText(filePath);
         Stream stream = DeadCellsBossFight.Instance.GetFileStream(filePath);
-        using StreamReader sr = new StreamReader(stream);
-        // 读取整个文件内容为字符串
-        string json = sr.ReadToEnd();
-
+        string json;
+        using (StreamReader sr = new StreamReader(stream))
+        {
+            // 读取整个文件内容为字符串
+            json = sr.ReadToEnd();
+        }
         // 使用 JArray 解析 JSON 数组
         JArray dataArray = JArray.Parse(json);
 
@@ -261,34 +263,8 @@ public class BottleSystem : ModSystem
             int bottleItemLabel = item["BottleItemLable"].Value<int>();
 
             string name = item["id"].Value<string>();
-            Console.WriteLine(name);
-            if (ModContent.TryFind<ModItem>(name, out ModItem modItem))
-                {
-                Console.WriteLine();
-                Console.WriteLine(modItem.Type);
-                if (ModContent.TryFind<DeadCellsItem>(name, out DeadCellsItem aa))
-                    Console.WriteLine("yes!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                else
-                    Console.WriteLine("no!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            if (DeadCellsBossFight.Instance.TryFind<ModItem>(name, out ModItem modItem))
                 bottleItemTypes.Add(modItem.Type); // 游戏内Item的type
-                if (modItem is DeadCellsItem DCitem)
-                {
-                    // 赋值给对应武器。相当于setdefault
-                    DCitem.iconX = x;
-                    DCitem.iconY = y;
-                    DCitem.ItemLabel = bottleItemLabel;
-                    int index = Bottle.GetHaloTextureIndex(bottleItemLabel);
-                    DCitem.colorIdx1 = index;
-                    // 对于多流派次要颜色进行赋值
-                    DCitem.colorIdx2 = DCitem.ItemLabel switch
-                    {
-                        4 => 3 - index,
-                        9 => 2 - index,
-                        10 => 1 - index,
-                        _ => index,
-                    };
-                }
-            }
             else
                 bottleItemTypes.Add(-1);
 

@@ -39,13 +39,7 @@ public  class WeaponSkillUISlot
         spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointWrap, DepthStencilState.None, RasterizerState.CullNone, null, Main.UIScaleMatrix);
         Rectangle iconRectangle = new Rectangle(icon_X * 24, icon_Y * 24, 24, 24);
 
-        if (colorIdx1 == 3) // 没有物品
-        {
-            AssetsLoader.SkillUIColor.Parameters["Input1RGBA"].SetValue((AssetsLoader.ThreeSectColor[colorIdx1].ToVector3() / 255f));
-            AssetsLoader.SkillUIColor.CurrentTechnique.Passes["UI1Color"].Apply();
-            spriteBatch.Draw(AssetsLoader.skillSlotFull, drawCenterPos, null, Color.White, 0, new Vector2(15, 0), 3f, SpriteEffects.None, 0);
-        }
-        else if (colorIdx1 == colorIdx2) // 单流派
+        if (colorIdx1 == 3 || colorIdx1 == colorIdx2) // 没有物品 || 单流派
         {
             AssetsLoader.SkillUIColor.Parameters["Input1RGBA"].SetValue((AssetsLoader.ThreeSectColor[colorIdx1].ToVector3() / 255f));
             AssetsLoader.SkillUIColor.CurrentTechnique.Passes["UI1Color"].Apply();
