@@ -61,6 +61,8 @@ public class DCPlayer : ModPlayer
     public static float yamadoExtraDrawRotation = 0;
     public static Projectile yamadoHeldProj;
 
+    public Projectile DCweaponProj;
+
     public int CollectorIdx = -1;
     public override void UpdateBadLifeRegen()
     {
@@ -77,6 +79,11 @@ public class DCPlayer : ModPlayer
     public override void PostItemCheck()
     {
         base.PostItemCheck();
+    }
+    public override void OnEnterWorld()
+    {
+        DCweaponProj = Projectile.NewProjectileDirect(Player.GetSource_None(), Vector2.Zero, Vector2.Zero, 10, 0, 0);
+        DCweaponProj.active = false;
     }
     public override void PreUpdate()
     {

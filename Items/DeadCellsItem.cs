@@ -244,7 +244,10 @@ public abstract class DeadCellsItem : ModItem
     {
         base.PostUpdate();
     }
-
+    public override bool CanStack(Item source)
+    {
+        return false;
+    }
 
     //
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -252,14 +255,20 @@ public abstract class DeadCellsItem : ModItem
     //////////////                                           武器部分                                                //////////////      
     public override bool CanUseItem(Player player)
     {
+        Main.NewText(playerComboAttack.DCweaponProj.whoAmI);
         //玩家后摇结束，且世界中没有存留上一次攻击
-        return player.ownedProjectileCounts[Item.shoot] < 1 && playerComboAttack.WeaponCoolDown == 0 && playerComboAttack.ConsistentLockCtrlAfter == 0;
-    }
+        return !playerComboAttack.DCweaponProj.active && playerComboAttack.WeaponCoolDown == 0 && playerComboAttack.ConsistentLockCtrlAfter == 0;
 
+    }
+    public override bool CanShoot(Player player)
+    {
+        //玩家后摇结束，且世界中没有存留上一次攻击
+        return !playerComboAttack.DCweaponProj.active && playerComboAttack.WeaponCoolDown == 0 && playerComboAttack.ConsistentLockCtrlAfter == 0;
+    }
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
         Main.NewText(type);
-        Projectile.NewProjectile(player.GetSource_FromAI(), Main.MouseWorld, Vector2.Zero, type, damage, knockback, -1, 1);
+        playerComboAttack.DCweaponProj = Projectile.NewProjectileDirect(player.GetSource_FromAI(), Main.MouseWorld, Vector2.Zero, type, damage, knockback, -1, 1);
         return false;
     }
 

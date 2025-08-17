@@ -95,11 +95,13 @@ public class Bleeder : DeadCellsItem
         //大概就这么写。
         if (FirstAttack())
         {
+            Main.NewText("执行1！");
             type = ModContent.ProjectileType<BleederAtkA>();
             InitialNextComboAttack(80, 4); //可接上第二段攻击时间间隔， 第二段攻击的前摇
         }
         if (CanNextAttack(2))//能进行第二段攻击
         {
+            Main.NewText("执行2！");
             type = ModContent.ProjectileType<BleederAtkB>();
             damage = DamageMul(1.05f);
             FinalComboAttack(6); //后摇

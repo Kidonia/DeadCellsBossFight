@@ -124,7 +124,7 @@ public abstract class DC_WeaponAnimation : ModProjectile
             // parentSource.Entity as NPC 用于获取这个NPC，这样我们才能用boss这个字段
             if (parentSource.Entity is NPC)
             {
-                Main.NewText("npc");
+                //Main.NewText("npc");
 
                 GetBHNPC();
                 spawner = npc;
@@ -133,7 +133,7 @@ public abstract class DC_WeaponAnimation : ModProjectile
             }
             if (parentSource.Entity is Player)
             {
-                Main.NewText("player");
+                //Main.NewText("player");
                 spawner = player;
                 weaponDic = AssetsLoader.AnimAtlas[AnimName];
                 Projectile.hostile = false;
