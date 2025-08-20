@@ -359,6 +359,12 @@ public class NormalUtils
     /// </summary>
     public static List<int> QNForbiddenItemList = new();
 
+    public static Dictionary<BHHesitateType, int> hesitate2proj = new Dictionary<BHHesitateType, int>
+    {
+        { BHHesitateType.None, ModContent.ProjectileType<IdleProj>() },
+        { BHHesitateType.determined, ModContent.ProjectileType<DeterminedProj>() },
+
+    };
 
     public static Dictionary<BHWeaponType, int> WeaponFirstAtkProjType = new Dictionary<BHWeaponType, int>()
     {
@@ -378,6 +384,7 @@ public class NormalUtils
         { BHWeaponType.LowHealth, ModContent.ProjectileType<LowHealthAtkA>() },
 
     };
+
 
     public static Dictionary<BHWeaponType, int> WeaponNameItemType = new Dictionary<BHWeaponType, int>()
     {

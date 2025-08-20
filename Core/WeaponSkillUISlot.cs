@@ -57,7 +57,7 @@ public  class WeaponSkillUISlot
         spriteBatch.End();
         spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointWrap, DepthStencilState.None, RasterizerState.CullNone, null, Main.UIScaleMatrix);
 
-        Main.NewText(Main.MouseWorld);
+        //Main.NewText(Main.MouseWorld);
 
 
     }

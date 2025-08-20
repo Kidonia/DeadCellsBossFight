@@ -280,7 +280,11 @@ public partial class BH : ModNPC
         if (jumpCooldown > 0) jumpCooldown--;
         if (rollCooldown > 0) rollCooldown--;
         if(atkCoolDown > 0) atkCoolDown--;
-        if(atkTiming > 0) atkTiming--;
+        if (hesitateCD > 0) hesitateCD--;
+        {
+            
+        }
+        if (atkTiming > 0) atkTiming--;
 
         //更新阶段效果
         stateBonus = (int)CurrentState * 3;

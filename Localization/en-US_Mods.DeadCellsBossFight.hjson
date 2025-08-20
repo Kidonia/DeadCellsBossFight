@@ -229,6 +229,7 @@ Projectiles: {
 	TestBottle.DisplayName: Test Bottle
 	testglow.DisplayName: testglow
 	WallRunProj.DisplayName: Wall Run Proj
+	DeterminedProj.DisplayName: Determined Proj
 }
 
 Biomes: {

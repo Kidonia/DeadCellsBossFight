@@ -35,6 +35,7 @@ public enum BHHesitateType
 
 
 }
+
 /// <summary>
 /// 好点子。阶段转换更换皮肤。原皮->白给->王手->女王->国王
 /// </summary>

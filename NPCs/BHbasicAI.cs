@@ -78,10 +78,18 @@ public partial class BH : ModNPC
     public void AI_Idle()
     {
         if (standingtime > 0)
+        {
             standingtime--;
+            // 站着不动时，偶尔触发一些小动作 （拟人技）
+            if (Main.rand.NextBool(180) && hesitateCD == 0)
+                ChangeMove_Hesitate(BHHesitateType.determined); // type后续可以改成随机的
+        }
         else if (X_abs_distance > 150f) // 距离较远，开始走向玩家
-            if (Main.rand.NextBool(100))
+            if (Main.rand.NextBool(40))
+            {
+                walkbacktime = Main.rand.Next(36, 64);
                 ChangeMove(BHMoveType.SmallWalkBack);
+            }
             else
                 ChangeMove(BHMoveType.Walk);
         else if (Main.rand.NextBool(20)) // 离玩家150码以内，可以有适当的迟疑拟人，即往回走一段距离
@@ -89,6 +97,8 @@ public partial class BH : ModNPC
             walkbacktime = Main.rand.Next(28, 50);
             ChangeMove(BHMoveType.SmallWalkBack);
         }
+
+
         NPC.velocity.X *= 0; // 站立不动
         NPC.noGravity = false; // 恢复重力影响
         NPC.noTileCollide = false; // 恢复碰撞
@@ -103,9 +113,29 @@ public partial class BH : ModNPC
         NPC.noGravity = false; // 恢复重力影响
         NPC.noTileCollide = false; // 恢复碰撞
         NPC.dontTakeDamage = false; // 恢复可受伤
+        
+        // 可以尝试添加DialogueBox ///////////////////////////////
 
+
+
+        // 请注意！
+        // 本 AI 里 ChangeMove(BHMoveType.Idle) 部分在每个Proj的AI中实现！
+        // 参考：DeterminedProj 的 AI() 部分：
+        // if (Projectile.frame == TotalFrame)
+        // {
+        //     Projectile.frame = 0;
+        //     var BH = npc.ModNPC as BH;
+        //     BH.standingtime = Main.rand.Next(36, 72);
+        //     BH.ChangeMove(BHMoveType.Idle);
+        // }
     }
-
+    public int hesitateCD = 300;
+    public void ChangeMove_Hesitate(BHHesitateType hesitatetype)
+    {
+        hesitateType = hesitatetype;
+        hesitateCD = 300;
+        ChangeMove(BHMoveType.Hesitate);
+    }
 
     public void AI_Heal()
     {
@@ -590,10 +620,13 @@ public partial class BH : ModNPC
         {
             ForceDirection = -ForceDirection; // 往反方向走
             basicMoveProj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, -NPC.velocity, ModContent.ProjectileType<WalkProj>(), 0, 0, -1, DrawTrail);
-
+        }
+        if(move == BHMoveType.Hesitate) // 不应使用ChangeMove，使用 ChangeMove_Hesitate(enum_type)
+        {
+            // hesitateType 在 ChangeMove_Hesitate() 中改变
+            basicMoveProj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, NPC.velocity, NormalUtils.hesitate2proj[hesitateType], 0, 0, -1, DrawTrail);
 
         }
-
 
         CurrentMove = move; // 切换当前状态
 

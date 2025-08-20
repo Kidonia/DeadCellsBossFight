@@ -43,7 +43,7 @@ public class WallRunProj : DC_WeaponAnimation
     }
     public override void PostDraw(Color lightColor)
     {
-        if (Projectile.localAI[2] != 1)
+        if (Projectile.localAI[2] != 1) // 1 为不进行绘制，一般表示跑步过程用武器刷新跑步时间。其他正常绘制。
             DrawWeaponTexture(WeaponDic, -13, -27);
     }
 }
