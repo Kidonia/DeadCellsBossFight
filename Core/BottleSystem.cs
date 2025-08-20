@@ -18,6 +18,15 @@ namespace DeadCellsBossFight.Core;
 public class BottleSystem : ModSystem
 {
     public static bool ActivateBottleSystem = false;
+    /// <summary>
+    /// -1 为给所有瓶子添加坠落效果，添加完成后自动转为 0。
+    /// 0 为 无瓶初始状态。
+    /// 1 为 有瓶子状态。
+    /// 2 为 重新添加新瓶子，添加完成后自动转为 1。
+    /// 3 为 给所有瓶子添加模拟碰撞晃动效果，添加完成后自动转为 4。
+    /// 4 为 无效果，仅占位。
+    /// 一般在某些AI中被改变为 -1，2，3。
+    /// </summary>
     public static int AddBottle = 0; ////////////////////////////////////////////////////要更新
     public List<Bottle> bottles = new List<Bottle>();
     public List<Vector2> allBottleBottomPos = new List<Vector2>() { new Vector2(720, 780) };

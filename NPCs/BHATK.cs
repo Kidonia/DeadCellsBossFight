@@ -521,7 +521,7 @@ public partial class BH : ModNPC
     {
         if (atkTiming == 0 && atkCoolDown > 0)
         {
-            if (X_distance < 64f)
+            if (X_abs_distance < 64f)
                 ChangeMove(BHMoveType.Idle);
             else
                 ChangeMove(BHMoveType.Walk);
@@ -582,7 +582,7 @@ public partial class BH : ModNPC
             CurrentATKChain = BHATKChain.NOATK;
 
             //清除攻击状态，可以走路跳跃啥的，不要动武器的冷却，让它自己流逝
-            if (X_distance < 50f)
+            if (X_abs_distance < 50f)
                 ChangeMove(BHMoveType.Idle);
             else
                 ChangeMove(BHMoveType.Walk);

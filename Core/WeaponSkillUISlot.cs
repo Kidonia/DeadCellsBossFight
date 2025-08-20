@@ -41,14 +41,14 @@ public  class WeaponSkillUISlot
 
         if (colorIdx1 == 3 || colorIdx1 == colorIdx2) // 没有物品 || 单流派
         {
-            AssetsLoader.SkillUIColor.Parameters["Input1RGBA"].SetValue((AssetsLoader.ThreeSectColor[colorIdx1].ToVector3() / 255f));
+            AssetsLoader.SkillUIColor.Parameters["Input1RGB"].SetValue((AssetsLoader.ThreeSectColor[colorIdx1].ToVector3() / 255f));
             AssetsLoader.SkillUIColor.CurrentTechnique.Passes["UI1Color"].Apply();
             spriteBatch.Draw(AssetsLoader.skillSlotFull, drawCenterPos, null, Color.White, 0, new Vector2(15, 0), 3f, SpriteEffects.None, 0);
         }
         else
         {
-            AssetsLoader.SkillUIColor.Parameters["Input1RGBA"].SetValue((AssetsLoader.ThreeSectColor[colorIdx1].ToVector3() / 255f));
-            AssetsLoader.SkillUIColor.Parameters["Input2RGBA"].SetValue((AssetsLoader.ThreeSectColor[colorIdx2].ToVector3() / 255f));
+            AssetsLoader.SkillUIColor.Parameters["Input1RGB"].SetValue((AssetsLoader.ThreeSectColor[colorIdx1].ToVector3() / 255f));
+            AssetsLoader.SkillUIColor.Parameters["Input2RGB"].SetValue((AssetsLoader.ThreeSectColor[colorIdx2].ToVector3() / 255f));
             AssetsLoader.SkillUIColor.CurrentTechnique.Passes["UI2Color"].Apply();
             spriteBatch.Draw(AssetsLoader.skillSlotFull, drawCenterPos, null, Color.White, 0, new Vector2(15, 0), 3f, SpriteEffects.None, 0);
         }

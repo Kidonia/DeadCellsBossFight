@@ -255,7 +255,6 @@ public abstract class DeadCellsItem : ModItem
     //////////////                                           武器部分                                                //////////////      
     public override bool CanUseItem(Player player)
     {
-        Main.NewText(playerComboAttack.DCweaponProj.whoAmI);
         //玩家后摇结束，且世界中没有存留上一次攻击
         return !playerComboAttack.DCweaponProj.active && playerComboAttack.WeaponCoolDown == 0 && playerComboAttack.ConsistentLockCtrlAfter == 0;
 
@@ -267,7 +266,6 @@ public abstract class DeadCellsItem : ModItem
     }
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
-        Main.NewText(type);
         playerComboAttack.DCweaponProj = Projectile.NewProjectileDirect(player.GetSource_FromAI(), Main.MouseWorld, Vector2.Zero, type, damage, knockback, -1, 1);
         return false;
     }

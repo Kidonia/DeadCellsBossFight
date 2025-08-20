@@ -24,8 +24,20 @@ public enum BHMoveType
     DoubleJump,
     Idle,
     SmashDown, // 下砸
-    ClimbWallAndSmashDown
+    ClimbWallAndSmashDown, // 两侧爬墙然后下砸（拟人技）
+    SmallWalkBack,  // 简短的往回走（拟人技）
+    Hesitate // 呆在原地，思考，摊手等等（拟人技）
 }
+public enum BHHesitateType
+{
+    None,
+    determined, // 捶手掌
+
+
+}
+/// <summary>
+/// 好点子。阶段转换更换皮肤。原皮->白给->王手->女王->国王
+/// </summary>
 public enum BHState
 {
     Begin,

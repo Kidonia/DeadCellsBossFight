@@ -13,10 +13,19 @@ using DeadCellsBossFight.Core;
 namespace DeadCellsBossFight.NPCs;
 [AutoloadBossHead]
 public partial class BH : ModNPC
-{ 
-    //ai[1]用于检测是否要阶段切换
+{
+    //ai[1]用于检测是否要阶段切换，目前在白给的AI里更改
+
+    //添加一个新AI：
+    //1. 给BHMoveType添加新的一项
+    //2. 在本页 AI() 函数的 switch (CurrentMove) 中添加该项的case
+    //3. 在 BHbasicAI 或其他地方写上对应的AI函数
+    //4. 留意调整 BHbasicAI 的 ChangeMove() 函数
+
+
+    #region 字段/变量
     /// <summary>
-    /// 记录当前的运动状态
+    /// 记录当前的运动状态。一般每个状态对应一个AI。
     /// </summary>
     public BHMoveType CurrentMove;
 
@@ -31,7 +40,7 @@ public partial class BH : ModNPC
     public BHATKChain CurrentATKChain;
 
     /// <summary>
-    /// 记录当前使用的武器的攻击模式，与CurrentATKChain，CurrentWeaponAtkMode结合使用确定每一段攻击是什么
+    /// 记录当前使用的武器的攻击模式，与CurrentATKChain，CurrentWeaponType结合使用确定每一段攻击是什么
     /// </summary>
     public BHWeaponAtkMode CurrentWeaponAtkMode;
 
@@ -43,6 +52,10 @@ public partial class BH : ModNPC
     /// 也是记录当前使用的武器类型，不为NoWeapon
     /// </summary>
     public BHWeaponType LastWeaponType;
+
+    /// <summary>
+    /// 测试用细胞人碰撞箱填充色。
+    /// </summary>
     public Color testDrawStateColor;
 
     /// <summary>
@@ -53,16 +66,35 @@ public partial class BH : ModNPC
     /// <summary>
     /// 玩家与NPC水平距离（绝对值）
     /// </summary>
-    public float X_distance;
+    public float X_abs_distance;
 
     /// <summary>
-    /// 绘制残影，0不绘制，1绘制
+    /// 绘制残影，0不绘制，1绘制。用int方便传参给Proj.ai[]
     /// </summary>
     public int DrawTrail = 0;
+
+    /// <summary>
+    /// 状态
+    /// </summary>
     public bool standing, walking, uping, downing;
+
+    /// <summary>
+    /// 头。火焰头的弹幕。不是飞头实体。
+    /// </summary>
     public Projectile headProj;
+
+    /// <summary>
+    /// 玩家。
+    /// </summary>
     public Player player;
+
+    /// <summary>
+    /// 存储基本移动动作弹幕。
+    /// ai[0]用来控制是否绘制细胞人移动的残影（不是自带的额外洋葱皮残影）0是不绘制，1是自动添加并绘制。
+    /// </summary>
     public Projectile basicMoveProj;
+    #endregion
+
     public override void SetDefaults()
     {
         NPC.width = 80;
@@ -135,7 +167,7 @@ public partial class BH : ModNPC
 
         
         distance = (player.Center - NPC.Center).Length();
-        X_distance = Math.Abs((player.Center - NPC.Center).X);
+        X_abs_distance = Math.Abs((player.Center - NPC.Center).X);
         // 禁用玩家飞行
         player.wingTime = 0;
         //添加创意震撼
@@ -220,6 +252,13 @@ public partial class BH : ModNPC
             case BHMoveType.ClimbWallAndSmashDown:
                 AI_ClimbWallAndSmashDown();
                 testDrawStateColor = Color.Red;
+                break;
+            case BHMoveType.SmallWalkBack:
+                AI_SmallWalkBack();
+                testDrawStateColor = Color.OrangeRed;
+                break;
+            case BHMoveType.Hesitate:
+                AI_Hesitate();
                 break;
             default:
                 break;

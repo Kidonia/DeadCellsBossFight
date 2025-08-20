@@ -17,14 +17,32 @@ public partial class BH : ModNPC
     /// 追逐玩家的时间。归零则直接接上下一段攻击。
     /// </summary>
     public int chasingTime;
+    /// <summary>
+    /// 执行跳跃动作的冷却，避免跳完落地紧接着一直跳个不停。
+    /// </summary>
     public int jumpCooldown;
+    /// <summary>
+    /// 二段跳所需的间隔时间，即第一段跳之后的间隔。
+    /// </summary>
     public int secondJumpWaitTime;
+    /// <summary>
+    /// 翻滚方向。
+    /// </summary>
     public int rollDirection;
+    /// <summary>
+    /// 翻滚无敌时间。
+    /// </summary>
     public int rollImmuneTime;
+    /// <summary>
+    /// 翻滚的冷却时间。后期可以适当缩小。
+    /// </summary>
     public int rollCooldown;
     public int healPause;
     public int healCount;
     public int floatingTimeAfterHeal;
+    /// <summary>
+    /// 记录最后三个运动状态。一般用于在攻击之间衔接翻滚跳跃等动作。新动作会加在[2]，向前挤掉[0]
+    /// </summary>
     public BHMoveType[] lastThreeMovement;
     /// <summary>
     /// 一些动作要固定方向，不朝着玩家（爬墙等）
@@ -54,11 +72,23 @@ public partial class BH : ModNPC
     /// </summary>
     public const int FieldGround = 1632;
 
+
+    public int standingtime; // 强制站着不动的时间。
     //None使用，站立不动，重设一些属性
     public void AI_Idle()
     {
-        if (X_distance > 150f)
-            ChangeMove(BHMoveType.Walk);
+        if (standingtime > 0)
+            standingtime--;
+        else if (X_abs_distance > 150f) // 距离较远，开始走向玩家
+            if (Main.rand.NextBool(100))
+                ChangeMove(BHMoveType.SmallWalkBack);
+            else
+                ChangeMove(BHMoveType.Walk);
+        else if (Main.rand.NextBool(20)) // 离玩家150码以内，可以有适当的迟疑拟人，即往回走一段距离
+        {
+            walkbacktime = Main.rand.Next(28, 50);
+            ChangeMove(BHMoveType.SmallWalkBack);
+        }
         NPC.velocity.X *= 0; // 站立不动
         NPC.noGravity = false; // 恢复重力影响
         NPC.noTileCollide = false; // 恢复碰撞
@@ -66,6 +96,16 @@ public partial class BH : ModNPC
         CheckATK();//检测是否变换攻击
 
     }
+    public BHHesitateType hesitateType;
+    public void AI_Hesitate()
+    {
+        NPC.velocity.X *= 0; // 站立不动
+        NPC.noGravity = false; // 恢复重力影响
+        NPC.noTileCollide = false; // 恢复碰撞
+        NPC.dontTakeDamage = false; // 恢复可受伤
+
+    }
+
 
     public void AI_Heal()
     {
@@ -95,7 +135,10 @@ public partial class BH : ModNPC
             ChangeMove(BHMoveType.HideAndSummon);
         }
     }
-
+    
+    /// <summary>
+    /// 好点子：这部分可以试试阶段换皮，‘；放到阶段换皮，换皮王手之后再使用
+    /// </summary>
     public void AI_HideAndSummon()
     {
         NPC.dontTakeDamage = true; // 参考王手，此阶段空中正弦漂浮，免疫伤害
@@ -127,7 +170,7 @@ public partial class BH : ModNPC
             rollImmuneTime --;
             NPC.dontTakeDamage = true; // 翻滚时无敌
         }
-        NPC.velocity.X = rollDirection * 5.2f; // 速度要调
+        NPC.velocity.X = rollDirection * 5.2f; // 速度要调!!!
         if (rollImmuneTime <= 0)
         {
             SoundEngine.PlaySound(AssetsLoader.hit_crit);
@@ -150,27 +193,19 @@ public partial class BH : ModNPC
         NPC.velocity.X = MathHelper.Lerp(NPC.velocity.X, NPC.direction * 5.5f, 0.35f); // 走路速度要调
         if (Main.rand.NextBool(20))
         {
-            if (NPC.Center.X < FieldMiddle - 350 && player.velocity.X < 0)
-            {
-                ClimbSide = -1;
-                ChangeMove(BHMoveType.ClimbWallAndSmashDown);
-            }
-            else if (NPC.Center.X > FieldMiddle + 350 && player.velocity.X > 0)
-            {
-                ClimbSide = 1;
-                ChangeMove(BHMoveType.ClimbWallAndSmashDown);
-            }
+            AddClimbWallThenSmashDown();
         }
-        if (X_distance < 50f)
+        if (X_abs_distance < 50f)
             ChangeMove(BHMoveType.Idle);
     }
+
 
 
 
     //一段跳
     public void AI_Jump()
     {
-        if (X_distance > 40f)
+        if (X_abs_distance > 40f)
             NPC.velocity.X = MathHelper.Lerp(NPC.velocity.X, NPC.direction * 5.4f, 0.35f); // 速度要调
 
 
@@ -181,7 +216,7 @@ public partial class BH : ModNPC
     }
     public void AI_DoubleJump()
     {
-        if (X_distance > 40f)
+        if (X_abs_distance > 40f)
             NPC.velocity.X = MathHelper.Lerp(NPC.velocity.X, NPC.direction * 5.4f, 0.35f); // 速度要调
 
 
@@ -214,8 +249,12 @@ public partial class BH : ModNPC
     /// 别的动作需要检测使用移动弹幕的，加上这个，改为true
     /// </summary>
     public bool extraMoveCheck;
+
     public bool ClimbWalking;
     private int smallAnimClimbPause = 0;
+    /// <summary>
+    /// 爬墙时使用攻击键重置爬墙技巧，拟人技。此弹幕为那一帧攻击的弹幕。
+    /// </summary>
     private Projectile animBetweenClimb;
     public void AI_ClimbWallAndSmashDown()
     {
@@ -231,7 +270,7 @@ public partial class BH : ModNPC
             extraMoveCheck = true;
             jumpWallTime--;
             NPC.velocity = new Vector2(ClimbSide * -12f, -10f);
-            if (jumpWallTime == 0 || X_distance < 30)
+            if (jumpWallTime == 0 || X_abs_distance < 30)
             {
                 jumpWallTime = 0;
                 extraMoveCheck = false;
@@ -313,11 +352,11 @@ public partial class BH : ModNPC
             DrawTrail = 1; // 开启残影
             NPC.velocity = new Vector2(ClimbSide, -8.6f);
             ClimbTime--;
-            if (ClimbTime % 20 == 0)
+            if (ClimbTime % 20 == 0) // 爬墙相关的速度，时机尽量都不再变。墙上一共使用两次攻击重置
             {
-                basicMoveProj.localAI[2] = 1;
+                basicMoveProj.localAI[2] = 1; // 详见WallRunProj的PostDraw。1 为不进行绘制，其他正常绘制。
                 smallAnimClimbPause = 4;
-                if (CurrentWeaponAtkMode == BHWeaponAtkMode.HeavyAtk)
+                if (CurrentWeaponAtkMode == BHWeaponAtkMode.HeavyAtk) // 重武多停留一帧
                     smallAnimClimbPause++;
                 animBetweenClimb = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, NPC.velocity, NormalUtils.WeaponFirstAtkProjType[CurrentWeaponType], 0, 0, -1, DrawTrail);
             }
@@ -340,6 +379,37 @@ public partial class BH : ModNPC
 
     }
 
+    public int walkbacktime;
+    public void AI_SmallWalkBack()
+    {
+        CheckATK();
+        NPC.direction = ForceDirection;
+        NPC.velocity.X = MathHelper.Lerp(NPC.velocity.X, ForceDirection * 5.5f, 0.35f); // 走路速度要调
+        walkbacktime--;
+        if ((NPC.Left.X - FieldLeft < 16) || (FieldRight - NPC.Right.X < 16))
+        {
+            walkbacktime = 0;
+            Main.NewText("沾边");
+        } 
+        if (walkbacktime == 0)
+        {
+            standingtime = Main.rand.Next(12, 60); // 走回去小站一会。
+            ChangeMove(BHMoveType.Idle);
+        }
+    }
+    public void AddClimbWallThenSmashDown()
+    {
+        if (NPC.Center.X < FieldMiddle - 350 && player.velocity.X < 0)
+        {
+            ClimbSide = -1;
+            ChangeMove(BHMoveType.ClimbWallAndSmashDown);
+        }
+        else if (NPC.Center.X > FieldMiddle + 350 && player.velocity.X > 0)
+        {
+            ClimbSide = 1;
+            ChangeMove(BHMoveType.ClimbWallAndSmashDown);
+        }
+    }
     public void AI_SmashDown()
     {
         DrawTrail = 1;
@@ -381,6 +451,7 @@ public partial class BH : ModNPC
         }
         else if (atkCoolDown == 0)
         {
+            ////////////////////////////////////////////////////////////// 需要大改 ///////////////////////////////////////////////////////
             //Main.NewText(distance);
             if (distance > 240f && distance < 400f && Main.rand.NextBool(60)) // 距离220~400码内，判定可以进行攻击动作
             {
@@ -515,6 +586,14 @@ public partial class BH : ModNPC
             ClimbWalking = true;
             basicMoveProj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, NPC.velocity, ModContent.ProjectileType<WalkProj>(), 0, 0, -1, DrawTrail);
         }
+        if(move == BHMoveType.SmallWalkBack)
+        {
+            ForceDirection = -ForceDirection; // 往反方向走
+            basicMoveProj = Projectile.NewProjectileDirect(NPC.GetSource_FromAI(), NPC.Center, -NPC.velocity, ModContent.ProjectileType<WalkProj>(), 0, 0, -1, DrawTrail);
+
+
+        }
+
 
         CurrentMove = move; // 切换当前状态
 

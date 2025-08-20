@@ -159,6 +159,8 @@ public class DCWorldSystem : ModSystem
         // https://github.com/tModLoader/tModLoader/wiki/Vanilla-Interface-layers-values
         base.ModifyInterfaceLayers(layers);//鼠标放上去可以去wiki链接里看
 
+        //Main.NewText($"{AssetsLoader.SkillUIColor.Parameters.Count}");
+
         if (singleDialogueBox.active)
         {
             DialogueBox.UpdateDialogueBox(singleDialogueBox, Main.npc[collectorNPCidx].Center - new Vector2(0, 200) - Main.screenPosition);
