@@ -81,8 +81,8 @@ public partial class BH : ModNPC
         {
             standingtime--;
             // 站着不动时，偶尔触发一些小动作 （拟人技）
-            if (Main.rand.NextBool(180) && hesitateCD == 0)
-                ChangeMove_Hesitate(BHHesitateType.determined); // type后续可以改成随机的
+            if (Main.rand.NextBool(2) && hesitateCD == 0)
+                ChangeMove_Hesitate((BHHesitateType)2); // type后续可以改成随机的
         }
         else if (X_abs_distance > 150f) // 距离较远，开始走向玩家
             if (Main.rand.NextBool(40))

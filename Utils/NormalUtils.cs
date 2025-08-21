@@ -1,19 +1,20 @@
-﻿using DeadCellsBossFight.Projectiles.WeaponAnimationProj;
+﻿using DeadCellsBossFight.NPCs;
 using DeadCellsBossFight.Projectiles;
+using DeadCellsBossFight.Projectiles.BasicAnimationProj;
+using DeadCellsBossFight.Projectiles.WeaponAnimationProj;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Graphics;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.GameContent.Achievements;
 using Terraria.ID;
 using Terraria.ModLoader;
-using DeadCellsBossFight.Projectiles.BasicAnimationProj;
-using System.Text;
 using Terraria.UI.Chat;
-using ReLogic.Graphics;
-using DeadCellsBossFight.NPCs;
 
 namespace DeadCellsBossFight.Utils;
 
@@ -217,6 +218,41 @@ public class NormalUtils
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="dict1"></param>
+    /// <param name="dict2"></param>
+    /// <returns></returns>
+    public static Dictionary<int, DCAnimPic> MergeTwoAnimDictionaries(Dictionary<int, DCAnimPic> dict1, Dictionary<int, DCAnimPic> dict2)
+    {
+        // 获取第一个字典键的最大值 n，如果字典为空则 n 为 -1
+        int n = dict1.Count > 0 ? dict1.Keys.Max() : -1;
+        int offset = n + 1;
+
+        // 调整第二个字典的键：每个键加上 offset
+        Dictionary<int, DCAnimPic> adjustedDict2 = new Dictionary<int, DCAnimPic>();
+        foreach (KeyValuePair<int, DCAnimPic> kvp in dict2)
+        {
+            int newKey = kvp.Key + offset;
+            adjustedDict2[newKey] = kvp.Value;
+        }
+
+        // 合并两个字典
+        Dictionary<int, DCAnimPic> mergedDict = new Dictionary<int, DCAnimPic>();
+        foreach (KeyValuePair<int, DCAnimPic> kvp in dict1)
+        {
+            mergedDict[kvp.Key] = kvp.Value;
+        }
+        foreach (KeyValuePair<int, DCAnimPic> kvp in adjustedDict2)
+        {
+            mergedDict[kvp.Key] = kvp.Value;
+        }
+
+        return mergedDict;
+    }
+
+
     public static string InsertInEachRangePixel(string input, DynamicSpriteFont font)
     {
         StringBuilder result = new StringBuilder();
@@ -363,6 +399,11 @@ public class NormalUtils
     {
         { BHHesitateType.None, ModContent.ProjectileType<IdleProj>() },
         { BHHesitateType.determined, ModContent.ProjectileType<DeterminedProj>() },
+        { BHHesitateType.thinkStand, ModContent.ProjectileType<ThinkStandProj>() },
+        { BHHesitateType.travoltaFull, ModContent.ProjectileType<TravoltaFullProj>() },
+        { BHHesitateType.sayno, ModContent.ProjectileType<SayNoProj>() },
+        { BHHesitateType.finger3, ModContent.ProjectileType<FuckOffProj>() },
+
 
     };
 

@@ -2,7 +2,10 @@
 using DeadCellsBossFight.Core;
 using DeadCellsBossFight.Projectiles;
 using DeadCellsBossFight.Projectiles.NPCsProj;
+using DeadCellsBossFight.Utils;
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
+using System.Linq;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -37,7 +40,38 @@ namespace DeadCellsBossFight.Items
             Projectile.NewProjectile(source, Main.MouseWorld, Vector2.Zero, ModContent.ProjectileType<testglow>(), 0, knockback, -1, 1);
             DCWorldSystem.ChangeToPrisonSky2 = !DCWorldSystem.ChangeToPrisonSky2;
             return false;
+
+            //var dic1 = AssetsLoader.BHanimAtlas["travolta"];
+            //var dic2 = AssetsLoader.BHanimAtlas["travoltaIdle"];
+            //var dic = NormalUtils.MergeTwoAnimDictionaries(dic1, dic2);
+            //showdickey(dic1);
+            //showdickey(dic2);
+            //Main.NewText("");
+            //showdickey(dic);
+
+            //Main.NewText("---end---");
+            //int idx2 = 7;
+            //Main.NewText(dic2[idx2].name.ToString() +" " +  dic[idx2+dic1.Keys.Max()+1].name.ToString());
+
         }
+        //public void showdickey(Dictionary<int, DCAnimPic> dic)
+        //{
+        //    Main.NewText(dic.Count);
+        //    string aa = "";
+        //    int k = 60;
+        //    foreach (int n in dic.Keys)
+        //    {
+        //        k--;
+        //        aa += $" {n}";
+        //        if (k == 0)
+        //        {
+        //            Main.NewText($"{aa}");
+        //            k = 60;
+        //            aa = "";
+        //        }
+        //    }
+        //    Main.NewText($"{aa}");
+        //}
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();

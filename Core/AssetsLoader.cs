@@ -817,7 +817,7 @@ public class AssetsLoader
                     {
                         if (atlasdic.TryGetValue(prefix, out var innerDict))
                         {
-                            innerDict.Add(key, pic);
+                            innerDict.Add(key, pic); // 因为添加的过程中key不是按顺序的，所以不能使用List
                         }
                         else
                         {

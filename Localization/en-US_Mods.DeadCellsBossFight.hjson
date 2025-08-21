@@ -230,6 +230,10 @@ Projectiles: {
 	testglow.DisplayName: testglow
 	WallRunProj.DisplayName: Wall Run Proj
 	DeterminedProj.DisplayName: Determined Proj
+	ThinkProj.DisplayName: Think Proj
+	TravoltaProj.DisplayName: Travolta Proj
+	ThinkStandProj.DisplayName: Think Stand Proj
+	TravoltaFullProj.DisplayName: Travolta Full Proj
 }
 
 Biomes: {

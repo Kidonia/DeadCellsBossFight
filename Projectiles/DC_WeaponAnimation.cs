@@ -42,6 +42,11 @@ public abstract class DC_WeaponAnimation : ModProjectile
     /// 动作名称。见cdb
     /// </summary>
     public virtual string AnimName => "";
+    /// <summary>
+    /// 基本不用，有时候一些动作转为Idle动作时会有一个过度的动画，则启用这个
+    /// </summary>
+    public virtual string AnimName2 => "";
+
 
     /// <summary>
     /// fx特效贴图名称。见cdb
@@ -129,6 +134,11 @@ public abstract class DC_WeaponAnimation : ModProjectile
                 GetBHNPC();
                 spawner = npc;
                 weaponDic = AssetsLoader.BHanimAtlas[AnimName];
+                if (AnimName2 != "")
+                {
+                    var weaponDic2 = AssetsLoader.BHanimAtlas[AnimName2];
+                    weaponDic = NormalUtils.MergeTwoAnimDictionaries(weaponDic, weaponDic2);
+                }
                 return;
             }
             if (parentSource.Entity is Player)
@@ -136,6 +146,11 @@ public abstract class DC_WeaponAnimation : ModProjectile
                 //Main.NewText("player");
                 spawner = player;
                 weaponDic = AssetsLoader.AnimAtlas[AnimName];
+                if (AnimName2 != "")
+                {
+                    var weaponDic2 = AssetsLoader.BHanimAtlas[AnimName2];
+                    weaponDic = NormalUtils.MergeTwoAnimDictionaries(weaponDic, weaponDic2);
+                }
                 Projectile.hostile = false;
                 return;
             }
@@ -258,7 +273,7 @@ public abstract class DC_WeaponAnimation : ModProjectile
 
 
     /// <summary>
-    /// dic是武器贴图序号的字典。基本就填WeaponDic。
+    /// dic是武器贴图序号的字典。基本就填WeaponDic。为什么不用List，详见Assetsloader
     /// drawStartOffsetX相当于玩家位置相对图片中点的横向偏移量，在图片中偏几像素就是几，左负右正。
     /// drawStartOffsetY相当于玩家位置相对图片中点的纵向偏移量，在图片中偏几像素就是几，上负下正。
     /// hasglow说明有发光颜色。默认否。

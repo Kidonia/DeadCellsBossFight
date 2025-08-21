@@ -32,6 +32,11 @@ public enum BHHesitateType
 {
     None,
     determined, // 捶手掌
+    thinkStand, // 站着托下巴思考
+    travoltaFull, // 左右看完整摊手
+    sayno, // 伸手晃说不
+    finger3, // 中指
+
 
 
 }
